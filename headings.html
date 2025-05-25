@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tutorial</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles-html.css" />
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg main-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/w3schools-logo.png" alt="logo" width="50" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tutorials
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Exercises
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search..." />
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch" />
+                </div>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-graduation-cap"></i> For Teachers
+                </a>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-award"></i> Get Certified
+                </a>
+
+                <a href="#" class="btn btn-success">Sign Up</a>
+                <a href="#" class="btn btn-outline-success">Log in</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Language Navigation Bar -->
+    <div class="language-bar sticky-top">
+        <!-- Sidebar Toggle Button (Moved Here) -->
+        <button class="btn btn-outline-light btn-sm tgl-sidebar m-1" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="#"  class="active">HTML</a>
+        <a href="#">CSS</a>
+        <a href="JS Home - Copy.html">JAVASCRIPT</a>
+        <a href="sql-home.html">SQL</a>
+        <a href="pyhome.html">PYTHON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">XML</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="CS HOME.html">CYBERSECURITY</a>
+        <a href="#">DATA SCIENCE</a>
+        <a href="#">INTRO TO PROGRAMMING</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-md-3 col-lg-2 sidebar p-0 vh-100 sticky-top overflow-auto">
+                <div class="d-flex justify-content-between align-items-center ps-3 pt-4 bg-light">
+                    <h5 class="m-0 pb-2">HTML Tutorial</h5>
+                    <button class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar"></button>
+                </div>
+                <a href="html-home.html" class="sidebar-item ps-5">HTML HOME</a>
+                <a href="introduction.html" class="sidebar-item ps-5 ">HTML Introduction</a>
+                <a href="editors.html" class="sidebar-item ps-5">HTML Editors</a>
+                <a href="basic.html" class="sidebar-item ps-5">HTML Basic</a>
+                <a href="elements.html" class="sidebar-item ps-5">HTML Elements</a>
+                <a href="attributes.html" class="sidebar-item ps-5">HTML Attributes</a>
+                <a href="#" class="sidebar-item ps-5 active">HTML Headings</a>
+                <a href="paragraphs.html" class="sidebar-item ps-5">HTML Paragraphs</a>
+                <a href="styles.html" class="sidebar-item ps-5">HTML Styles</a>
+                <a href="formatting.html" class="sidebar-item ps-5">HTML Formatting</a>
+                <a href="#" class="sidebar-item ps-5">HTML Quotations</a>
+                <a href="#" class="sidebar-item ps-5">HTML Comments</a>
+                <a href="#" class="sidebar-item ps-5">HTML Colors</a>
+                <a href="#" class="sidebar-item ps-5">HTML CSS</a>
+                <a href="#" class="sidebar-item ps-5">HTML Links</a>
+                <a href="#" class="sidebar-item ps-5">HTML Images</a>
+                <a href="#" class="sidebar-item ps-5">HTML Favicon</a>
+                <a href="#" class="sidebar-item ps-5">HTML Page Title</a>
+                <a href="#" class="sidebar-item ps-5">HTML Tables</a>
+                <a href="#" class="sidebar-item ps-5">HTML Lists</a>
+                <a href="#" class="sidebar-item ps-5">HTML Block & Inline</a>
+                <a href="#" class="sidebar-item ps-5">HTML Div</a>
+                <a href="#" class="sidebar-item ps-5">HTML Classes</a>
+                <a href="#" class="sidebar-item ps-5">HTML Id</a>
+                <a href="#" class="sidebar-item ps-5">HTML Iframes</a>
+                <a href="#" class="sidebar-item ps-5">HTML JavaScript</a>
+                <a href="#" class="sidebar-item ps-5">HTML File Paths</a>
+                <a href="#" class="sidebar-item ps-5">HTML Head</a>
+                <a href="#" class="sidebar-item ps-5">HTML Layout</a>
+                <a href="#" class="sidebar-item ps-5">HTML Responsive</a>
+                <a href="#" class="sidebar-item ps-5">HTML Computercode</a>
+                <a href="#" class="sidebar-item ps-5">HTML Semantics</a>
+                <a href="#" class="sidebar-item ps-5">HTML Style Guide</a>
+                <a href="#" class="sidebar-item ps-5">HTML Entities</a>
+                <a href="#" class="sidebar-item ps-5">HTML Symbols</a>
+                <a href="#" class="sidebar-item ps-5">HTML Emojis</a>
+                <a href="#" class="sidebar-item ps-5">HTML Charsets</a>
+                <a href="#" class="sidebar-item ps-5">HTML URL Encode</a>
+                <a href="#" class="sidebar-item ps-5">HTML vs. XHTML</a>
+                
+                <h5 class="ps-3 pt-4">HTML Forms</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Forms</a>
+                <a href="#" class="sidebar-item ps-5">HTML Form Attributes</a>
+                <a href="#" class="sidebar-item ps-5">HTML Form Elements</a>
+                <a href="#" class="sidebar-item ps-5">HTML Input Types</a>
+                <a href="#" class="sidebar-item ps-5">HTML Input Attributes</a>
+                <a href="#" class="sidebar-item ps-5">Input Form Attributes</a>
+                
+                <h5 class="ps-3 pt-4">HTML Graphics</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Canvas</a>
+                <a href="#" class="sidebar-item ps-5">HTML SVG</a>
+                
+                <h5 class="ps-3 pt-4">HTML Media</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Media</a>
+                <a href="#" class="sidebar-item ps-5">HTML Video</a>
+                <a href="#" class="sidebar-item ps-5">HTML Audio</a>
+                <a href="#" class="sidebar-item ps-5">HTML Plug-ins</a>
+                <a href="#" class="sidebar-item ps-5">HTML YouTube</a>
+                
+                <h5 class="ps-3 pt-4">HTML APIs</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Web APIs</a>
+                <a href="#" class="sidebar-item ps-5">HTML Geolocation</a>
+                <a href="#" class="sidebar-item ps-5">HTML Drag and Drop</a>
+                <a href="#" class="sidebar-item ps-5">HTML Web Storage</a>
+                <a href="#" class="sidebar-item ps-5">HTML Web Workers</a>
+                <a href="#" class="sidebar-item ps-5">HTML SSE</a>
+                
+                <h5 class="ps-3 pt-4">HTML Examples & Practice</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Examples</a>
+                <a href="#" class="sidebar-item ps-5">HTML Editor</a>
+                <a href="#" class="sidebar-item ps-5">HTML Quiz</a>
+                <a href="#" class="sidebar-item ps-5">HTML Exercises</a>
+                <a href="#" class="sidebar-item ps-5">HTML Website</a>
+                <a href="#" class="sidebar-item ps-5">HTML Syllabus</a>
+                <a href="#" class="sidebar-item ps-5">HTML Study Plan</a>
+                <a href="#" class="sidebar-item ps-5">HTML Interview Prep</a>
+                <a href="#" class="sidebar-item ps-5">HTML Bootcamp</a>
+                <a href="#" class="sidebar-item ps-5">HTML Certificate</a>
+                <a href="#" class="sidebar-item ps-5">HTML Summary</a>
+                <a href="#" class="sidebar-item ps-5">HTML Accessibility</a>
+                
+                <h5 class="ps-3 pt-4">HTML References</h5>
+                <a href="#" class="sidebar-item ps-5">HTML Tag List</a>
+                <a href="#" class="sidebar-item ps-5">HTML Attributes</a>
+                <a href="#" class="sidebar-item ps-5">HTML Global Attributes</a>
+                <a href="#" class="sidebar-item ps-5">HTML Browser Support</a>
+                <a href="#" class="sidebar-item ps-5">HTML Events</a>
+                <a href="#" class="sidebar-item ps-5">HTML Colors</a>
+                <a href="#" class="sidebar-item ps-5">HTML Canvas</a>
+                <a href="#" class="sidebar-item ps-5">HTML Audio/Video</a>
+                <a href="#" class="sidebar-item ps-5">HTML Doctypes</a>
+                <a href="#" class="sidebar-item ps-5">HTML Character Sets</a>
+                <a href="#" class="sidebar-item ps-5">HTML URL Encode</a>
+                <a href="#" class="sidebar-item ps-5">HTML Lang Codes</a>
+                <a href="#" class="sidebar-item ps-5">HTTP Messages</a>
+                <a href="#" class="sidebar-item ps-5">HTTP Methods</a>
+                <a href="#" class="sidebar-item ps-5">PX to EM Converter</a>
+                <a href="#" class="sidebar-item ps-5">Keyboard Shortcuts</a>
+                
+            </div>
+
+            <!-- Main Content + Sidebar Kanan -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row">
+                    <!-- Konten Utama -->
+                    <div class="col-md-9 col-lg-10 p-5 main-content">
+                        <h1 class="mb-4 mt-5">HTML Headings
+                        </h1>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <a href="attributes.html" class="nav-btn">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </a>
+                            <a href="paragraphs.html" class="nav-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <hr class="mt-4">
+
+                        <p>HTML headings are titles or subtitles that you want to display on a webpage.                         
+                        </p>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4"> 
+                          
+                            <div class="p-4 border position-relative" style="background-color:rgb(225, 225, 225) ">
+                                <h4 class="pt-1 pb-2">Example</h4>
+                                <div class="bg-white border-start border-success border-4 p-4">
+                                    
+                                        <h1>Heading 1</h1>
+                                        <h2>Heading 2</h2>
+                                        <h3>Heading 3</h3>
+                                        <h4>Heading 4</h4>
+                                        <h5>Heading 5</h5>
+                                        <h6>Heading 6</h6>
+                                  
+                                </div>
+                                <a href="#" class="btn btn-success mt-3">Try it Yourself »</a>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>HTML Headings</h2>
+                            <br>
+                            <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
+                            <p><code>&lt;h1&gt;</code> defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading.</p>
+                        
+                            <div class="p-4 rounded mt-4" style="background-color:rgb(225, 225, 225) ">
+                                <h2>Example</h2>
+                                <br>
+                                <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                    <code>
+                                        &lt;h1&gt;Heading 1&lt;/h1&gt;<br />
+                                        &lt;h2&gt;Heading 2&lt;/h2&gt;<br />
+                                        &lt;h3&gt;Heading 3&lt;/h3&gt;<br />
+                                        &lt;h4&gt;Heading 4&lt;/h4&gt;<br />
+                                        &lt;h5&gt;Heading 5&lt;/h5&gt;<br />
+                                        &lt;h6&gt;Heading 6&lt;/h6&gt;
+                                    </code>
+                                </div>
+                                <button class="btn btn-success mt-3">Try it Yourself »</button>
+                            </div>
+                            <br>
+                            <div class="w-100 p-4 rounded" style="background-color: rgb(247, 247, 195)">
+                                <p class="mt-3 ms-3"><b>Note:</b> Browsers automatically add some white space (a margin) before and after a heading.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>Headings Are Important</h2>
+                            <br>
+                            <p>Search engines use the headings to index the structure and content of your web pages.</p>
+
+                            <p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+
+                            <p><code>&lt;h1&gt;</code> headings should be used for main headings, followed by <code>&lt;h2&gt;</code> headings, then the less important <code>&lt;h3&gt;</code>, and so on.</p>
+
+                        
+                           
+                            <br>
+                            <div class="w-100 p-4 rounded" style="background-color: rgb(247, 247, 195)">
+                                <p class="mt-3 ms-3"><b>Note:</b> Use HTML headings for headings only. Don't use headings to make text <b>BIG</b> or <b>bold</b>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>Bigger Headings</h2>
+                            <br>
+                            <p>Each HTML heading has a default size. However, you can specify the size for any heading with the <code>style</code> attribute, using the CSS <code>font-size</code> property:</p>
+                        
+                            <div class="p-4 rounded mt-4" style="background-color:rgb(225, 225, 225) ">
+                                <h2>Example</h2>
+                                <br>
+                                <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                    <code>
+                                        &lt;h1 style="font-size:60px;"&gt;Heading 1&lt;/h1&gt;
+                                    </code>
+                                </div>
+                                <button class="btn btn-success mt-3">Try it Yourself »</button>
+                            </div>
+                          
+                        </div>
+                        
+                        <hr class="mt-4" />
+
+                        <div class="mt-4"> 
+                        
+                            
+                            <div class="p-5 rounded" style="background-color: #2b3648">
+                                <div class="text-center mb-4">
+                                    <h2 class="text-white d-inline-block">Exercise</h2>
+                                    <span class="badge rounded-circle bg-secondary text-white ms-2">?</span>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <p class="text-white">
+                                        Which of the following headers is the largest and most important header?
+                                    </p>
+                                </div>
+
+                                <div class="mb-2">
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer1" class="me-2" />
+                                        <label for="answer1"><code class="text-white">&lt;h1&gt;</code></label>
+                                    </div>
+                                    
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer2" class="me-2" />
+                                        <label for="answer2"><code class="text-white">&lt;h2&gt;</code></label>
+                                    </div>
+                                    
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer3" class="me-2" />
+                                        <label for="answer3"><code class="text-white">&lt;h3&gt;</code></label>
+                                    </div>
+                                    
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer4" class="me-2" />
+                                        <label for="answer4"><code class="text-white">&lt;h4&gt;</code></label>
+                                    </div>
+                                    
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer5" class="me-2" />
+                                        <label for="answer5"><code class="text-white">&lt;h5&gt;</code></label>
+                                    </div>
+                                    
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer6" class="me-2" />
+                                        <label for="answer6"><code class="text-white">&lt;h6&gt;</code></label>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-success px-4 py-2">
+                                        Submit Answer »
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>HTML Tag Reference
+                            </h2>
+                            <br>
+                            <p>W3Schools' tag reference contains additional information about these tags and their attributes.
+
+                            </p>
+                        
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Tag</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="text-dark">&lt;html&gt;</code></td>
+                                        <td><code class="text-dark">Defines the root of an HTML document</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="text-dark">&lt;body&gt;</code></td>
+                                        <td><code class="text-dark">Defines the document's body</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="text-dark">&lt;h1&gt;</code> to <code class="text-dark">&lt;h6&gt;</code></td>
+                                        <td><code class="text-dark">Defines HTML headings</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <div class="w-100 p-4 rounded" style="background-color: rgb(247, 247, 195)">
+                                <p class="mt-3 ms-3">For a complete list of all available HTML tags, visit our <a href="#" class="text-dark">HTML Tag Reference</a>.
+                                </p>
+                            </div>
+                        </div>
+                       
+                        
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+
+                           
+                            <h2 class="mt-5 text-center">Video: HTML Headings
+                            </h2>
+                            <a href="https://youtu.be/9gHPpwq6IaY&list=PLP9IO4UYNF0VdAajP_5pYG-jG2JRrG72s" target="_blank">
+                                <img src="https://www.w3schools.com/html/images/05_html_headings.webp" class="w-100" alt="intro">
+                            </a>
+
+
+                            <div class="d-flex justify-content-between mt-5 mb-4">
+                                <a href="attributes.html" class="nav-btn">
+                                    <i class="fas fa-chevron-left"></i> Previous
+                                </a>
+                                <a href="paragraphs.html" class="nav-btn">
+                                    Next <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                            <div
+                                class="bg-dark p-4 d-flex flex-column flex-md-row align-items-center justify-content-between rounded shadow-lg position-relative text-center text-md-start w-100">
+                                <h3 class="fw-bold text-white m-3">
+                                    Track Your Progress - it's free!
+                                </h3>
+                                <div class="d-flex flex-column flex-sm-row gap-3">
+                                    <a href="#" class="btn btn-success">Sign Up</a>
+                                    <a href="#" class="btn btn-outline-success">Log in</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Sidebar Kanan -->
+                    <div class="col-md-2 mt-5">
+                        <div class="card mb-4 mt-5">
+                            <img src="img/advertise.png" alt="Learning Resources" class="card-img-top" />
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">COLOR PICKER</div>
+                            <div class="card-body">
+                                <img src="img/color.png" alt="color" width="100" />
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-5" style="background-color: #272b37; color: white">
+        <div class="container">
+            <!-- Top Navigation Menus -->
+            <div class="row mb-5 w-100 justify-content-center">
+                <!-- Logo Column -->
+                <div
+                    class="mb-5 mx-5 w-100 d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 text-center">
+                    <a href="#" class="text-decoration-none">
+                        <img src="img/w3schools-logo.png" alt="W3Schools" width="80" />
+                    </a>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">PLUS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">SPACES</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">GET CERTIFIED</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR TEACHER</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR BUSINESS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">CONTACT US</a>
+                    </div>
+                </div>
+
+                <!-- Menu Columns -->
+                <div class="col-lg-9 text-center">
+                    <div class="row">
+                        <!-- Menu 1: Top Tutorials -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Tutorials</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Tutorial</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 2: Top References -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top References</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Colors</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Angular Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Reference</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 3: Top Examples -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Examples</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Examples</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 4: Get Certified -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Get Certified</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Front End Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C# Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Certificate</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="text-center mb-4">
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-youtube text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-linkedin text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-discord text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-facebook text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-instagram text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2 text-white">FORUM</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ABOUT</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ACADEMY</a>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-center text-white-50 mb-3">
+                <p>
+                    W3Schools is optimized for learning and training. Examples might be
+                    simplified to improve reading and learning. Tutorials, references,
+                    and examples are constantly reviewed to avoid errors, but we cannot
+                    warrant full correctness of all content. While using W3Schools, you
+                    agree to have read and accepted our
+                    <a href="#" class="text-white-50">terms of use</a>,
+                    <a href="#" class="text-white-50">cookie and privacy policy</a>.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-white-50">
+                <p>
+                    Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools
+                    is Powered by W3.CSS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-html.js"></script>
+</body>
+
+</html>

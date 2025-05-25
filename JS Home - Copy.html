@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Home</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .belowtopnavcontainer {
+          max-width:1750px;
+          margin:auto;
+        }
+        .contentcontainer {
+           background-color: #f5f6f7;
+        }
+        body.darkpagetheme .contentcontainer {
+           background-color: #29353e;
+        }
+        .sidebar{
+            position: fixed;
+            top: 90px;
+            overflow-y: auto;
+            background-color: #E7E9EB;
+            height: 545px;
+            width: 250px;
+        }
+        .sidebar h5{
+            margin-top: 25px;
+        }
+        .sidebar .box{
+            padding: 5px 0px;
+        }
+        .sidebar .box .in{
+            margin-left: 30px
+        }
+        .sidebar .box:hover{
+            background-color: #cccccc;
+        }
+        .nav{
+           position: fixed;
+           top: 0px;
+           height: 60px;
+           display: flex;
+           width: 100%;
+        }
+        .nav img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            margin-left: 5px;
+            
+        }
+        .nav .bar{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 19px;
+        }
+        .nav .bar a{
+            padding: 21px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav .search{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .nav .search input{ 
+            border-radius: 30px;
+            height: 40px;
+        }
+        .nav .search input:focus{
+            border: 0,5px solid rgb(68, 155, 68);
+            outline: 5px solid rgb(68, 155, 68);
+        }
+        .nav .bar2{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 20px;
+        }
+        .nav .bar2 a{
+            padding: 10px 30px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar2 a:hover{
+            background-color: #f2f2f2;
+            border-radius: 30px;
+        }
+        .nav .login1{
+           display: inline-block;
+           margin-left: 10px;
+           padding-top: 21px;
+        }
+        .nav .login1 a{
+            background-color: rgb(41, 168, 98);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2{
+           display: inline-block;
+           padding-top: 21px;
+        }
+        .nav .login2 a{
+            background-color: rgb(131, 197, 131);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2 a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav2{
+            position: fixed;
+            top: 0px;
+            background-color: #282A35;
+            width: 100%;
+            height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+            margin-top: 60px;
+        }
+        .nav2::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .nav2 .bar{
+            display: inline-block;
+            padding-top: 3px;
+        }
+        .nav2 .bar a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+        }
+        .nav2 .bar a:hover{
+            background-color: black;
+        }
+        .sidebar-right{
+          background-color: grey;
+          float: right;
+          height: 5000px;
+          width: 200px;
+        }
+        .main{
+          width: 1100px;
+          height: 3000px;
+          margin-left: 250px;
+          margin-top: 70px;
+        }
+        .main .head{
+          height: 450px;
+          width: 100%;
+        }
+        .main .head a p{
+          background-color: rgb(41, 168, 98);
+          width: 100px;
+          border-radius: 5px;
+        }
+        .main .head .items{
+          background-color: rgb(217, 238, 225);
+          height: 300px;
+          width: 850px;
+        }
+        .main .head .items a p{
+          background-color: rgb(41, 168, 98);
+          width: 300px;
+          border-radius: 5px;
+        }
+        .main .example .box{
+          background-color: rgb(231, 233, 235);
+          height: 300px;
+          width: 800px;
+          border-radius: 5px;
+        }
+        .main .example .box .box-in{
+          background-color: white;
+          border-left: 4px solid #4CAF50;
+          height: 150px;
+          width: 750px;
+        }
+        .main .learn .yellow-box{
+          background-color: rgb(255, 255, 204);
+          width: 850px;
+          height: 130px;
+        }
+        .main .study ul li{
+            margin: 10px 0px;
+        }
+        .main .study .blue-box{
+            background-color: rgb(217, 238, 225);
+            width: 850px;
+            height: 200px;
+        }  
+        .main .study .blue-box ul li{
+            margin: 0px;
+        }
+        .main .java-excercises .box{
+            background-color: rgb(45, 55, 72);
+            width: 850px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        .main .progres .items ul li{
+            margin: 10px 0px;
+        }
+        .main .career{
+            background-color: #282A35;
+            height: 400px;
+            width: 800px;
+            border-radius: 10px;
+        }
+        .main form .pilih{
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 700px;
+            height: 50px;
+            margin-left: 70px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 20px;
+        }
+        .main .example a p{
+            color: rgb(0, 0, 0);
+            width: 200px;
+            background-color: #cccccc;
+        }
+        .main .example a p:hover{
+            background-color: black;
+            color: white;
+        }
+        </style>
+    <body> 
+</head>
+<body>
+  <div class="nav fixed-top bg-light">
+    <a href="index.html"><img src="W3Schools_logo.svg.png" alt=""></a>
+    <div class="bar">
+        <a href="Tutorial.html">Tutorial</a>
+        <a href="Excercises.html">Excercise</a>
+        <a href="Certificates.html">Certificates</a>
+        <a href="Service.html">Service</a>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="bar2">
+        <a href="">Spaces</a>
+        <a href="">For Teacher</a>
+        <a href="">Get Certified</a>
+    </div>
+    <div class="login1">
+        <a href="" class="text-decoration-none">Sing Up</a>
+    </div>
+    <div class="login2">
+        <a href="" class="text-decoration-none">Log In</a>
+    </div>
+</div>
+<div class="nav2">
+    <div class="bar">
+        <a href="html-home.html">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#" style="background-color: rgb(41, 168, 98);">JAVASCRIPT</a>
+        <a href="sql-home.html">SQL</a>
+        <a href="pyhome.html">PHYTON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="CS HOME.html">CYBERSECURITY</a>
+    </div>
+</div>
+<div class="sidebar">
+  <div class="box" style="background-color: rgb(41, 168, 98); ">
+    <a href="JS Home - Copy.html" class="text-decoration-none">
+        <div class="in text-light">JS HOME</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Introduction.html" class="text-decoration-none">
+        <div class="in text-dark">JS Introduction</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Where To.html" class="text-decoration-none">
+        <div class="in text-dark">JS Where To</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Output.html" class="text-decoration-none">
+        <div class="in text-dark">JS Output</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Statements.html" class="text-decoration-none">
+        <div class="in text-dark">JS Statements</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Syntax.html" class="text-decoration-none">
+        <div class="in text-dark">JS Syntax</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Comments.html" class="text-decoration-none">
+        <div class="in text-dark">JS Comments</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Variables.html" class="text-decoration-none">
+        <div class="in text-dark">JS Variables</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Let.html" class="text-decoration-none">
+        <div class="in text-dark">JS Let</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="JS Const.html" class="text-decoration-none">
+        <div class="in text-dark">JS Const</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Operators</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Arithmetic</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Assignment</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Data Type</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Function</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Object</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Object properties</div>
+    </a>
+ </div>
+ <div class="box">
+    <a href="" class="text-decoration-none">
+        <div class="in text-dark">JS Object Methods</div>
+    </a>
+ </div>
+</div>
+<div class="sidebar-right">
+
+</div>
+<div class="main">
+    <div class="head">
+      <h1 class="ms-4 pt-4">Java Tutorial</h1>
+      <a href="" class="text-decoration-none">
+        <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block">Home</p>
+      </a>
+      <a href="JS Introduction.html" class="text-decoration-none">
+        <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block float-end me-4">Next</p>
+      </a>
+      <div class="items ms-3">
+          <h3 class="ms-4 pt-4">Learn JavaScript</h3>
+          <p class="ms-4">JavaScript is the world's most popular programming language.</p>
+          <p class="ms-4">JavaScript is the programming language of the Web.</p>
+          <p class="ms-4">JavaScript is easy to learn.</p>
+          <p class="ms-4">This tutorial will teach you JavaScript from basic to advanced.</p>
+          <a href="" class="text-decoration-none">
+            <p class="ms-4 p-2 text-white fw-bold text-center">Start Learninng JavaScript Now</p>
+          </a>
+      </div>
+    </div>
+    <hr width="80%" color="black">
+    <div class="example">
+      <h2 class="ms-4">Examples in Each Chapter</h2>
+      <p class="ms-4">With our "Try it Yourself" editor, you can edit the source code and view the result.</p>
+      <div class="box ms-3">
+        <h4 class="ms-4 pt-4">Example</h4>
+        <div class="box-in ms-4">
+
+        </div>
+        <a href="" class="text-decoration-none">
+          <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+        </a>
+      </div>
+    </div>
+    <hr width="80%" color="black">
+    <div class="use-menu">
+      <h2 class="ms-4">Use The Menu</h2>
+      <p class="ms-4">We recommend reading this tutorial, in the sequence listed in the menu.</p>
+      <p class="ms-4">If you have a large screen, the menu will always be present on the left.</p>
+      <p class="ms-4">If you have a small screen, open the menu by clicking the top menu sign</p>
+    </div>
+    <hr width="80%" color="black">
+    <div class="learn">
+      <h2 class="ms-4">Learn by Examples</h2>
+      <p class="ms-4">Examples are better than 1000 words. Examples are often easier to understand than text explanations.</p>
+      <p class="ms-4">This tutorial supplements all explanations with clarifying "Try it Yourself" examples.</p>
+      <div class="yellow-box ms-2">
+        <p class="ms-4 pt-3">If you try all the examples, you will learn a lot about JavaScript, in a very short time!</p>
+        <a href="" class="text-decoration-none">
+          <p class="ms-4 p-2 text-center text-white fw-bold" style="width: 200px; background-color: rgb(41, 168, 98); border-radius: 5px;">JavaScript Example</p>
+        </a>
+      </div>
+    </div>
+    <hr width="80%" color="black">
+    <div class="study">
+        <h2 class="ms-4">Why Study JavaScript?</h2>
+        <p class="ms-4">JavaScript is one of the <strong>3 languages</strong> all web developers <strong>must</strong> learn:</p>
+        <ul class="ms-5" style="list-style-type: number;">
+            <li>. <a href="" class="text-dark">HTML</a> to define the content of web pages</li>
+            <li>. <a href="" class="text-dark">CSS</a>to specify the layout of web pages</li>
+            <li>. <strong>JavaScript</strong> to program the behavior of web pages</li>
+        </ul>
+        <div class="blue-box ms-2">
+            <p class="ms-4 pt-4">This tutorial covers every version of JavaScript:</p>
+            <ul class="ms-5">
+                <li>The Original JavaScript ES1 ES2 ES3 (1997-1999)</li>
+                <li>The First Main Revision ES5 (2009)</li>
+                <li>The Second Revision ES6 (2015)</li>
+                <li>The Yearly Additions (2016, 2017 ... 2021, 2022)</li>
+            </ul>
+        </div>
+    </div>
+    <hr width="80%" color="black">
+    <div class="learning-speed">
+        <h2 class="ms-4">Learning Speed</h2>
+        <p class="ms-4">In this tutorial, the learning speed is your choice.</p>
+        <p class="ms-4">Everything is up to you.</p>
+        <p class="ms-4">If you are struggling, take a break, or re-read the material.</p>
+        <p class="ms-4 d-inline-block"><strong>Always</strong> more sure you understand <strong>All</strong> the "Try-it-Yourself" examples.</p>
+        <p class="ms-4">The only way to become a clever programmer is to: Practice. Practice. Practice. Code. Code. Code !</p>
+    </div>
+    <hr width="80%" color="black">
+    <div class="commond">
+        <h2 class="ms-4">Commonly Asked Questions</h2>
+        <ul class="ms-5">
+            <li>How do I get JavaScript?</li>
+            <li>Where can I download JavaScript?</li>
+            <li>Is JavaScript Free?</li>
+        </ul>
+        <strong class="ms-4">You don't have to get or download JavaScript.</strong><br><br>
+        <strong class="ms-4">JavaScript is already running in your browser on your computer, on your tablet, and on your smart-phone..</strong><br><br>
+        <strong class="ms-4">JavaScript is free to use for everyone.</strong>
+    </div>
+    <hr width="80%" color="black">
+    <div class="java-excercises">
+        <h2 class="ms-4">Java Excercises</h2><br>
+        <p class="ms-4">Many chapters in this tutorial end with an exercise where you can check your level of knowledge.</p>
+        <div class="box ms-4" style="height: 450px;">
+           <h2 class="text-center text-white pt-5">Excercise</h2>
+           <p class="text-center fw-bold text-white">What is a correct syntax for assigning a value to a variable?</p>
+           <form class="ms-1">
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x : 5</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x = 5</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x == 5</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x -> 5</p>
+            </div>
+            <a href="" class="text-decoration-none">
+                <p class="text-center mt-4 p-2 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 200px; margin-left: 35%;">Submit Answer <i class="fa-solid fa-angles-right"></i></p>
+            </a>
+         </form>
+        </div>
+    </div>
+    <hr width="80%" color="black">
+    <div class="java-quiz">
+        <h2 class="ms-4">JavaScript Quiz</h2><br>
+        <p class="ms-4">Test your JavaScript skills at W3Schools!</p>
+        <a href="" class="text-decoration-none">
+            <p class="ms-4 p-2 text-center text-white" style="background-color: #2196F3; width: 200px; border-radius: 5px;">Start JavaScript Quiz!</p>
+        </a>
+    </div>
+    <hr width="80%" color="black">
+    <div class="progres">
+        <div class="items d-inline-block" style="width:  400px; height: 400px;">
+            <h2 class="ms-4">Track Your Progress</h2>
+            <p class="ms-4">Create a free W3Schools account and get access to more features and learning materials:</p>
+            <ul class="ms-4 d-inline-block">
+                <li>View your completed tutorials, exercises, and quizzes</li>
+                <li>Keep an eye on your progress and daily streak</li>
+                <li>Set goals and create learning paths</li>
+                <li>Create your own personal website</li>
+            </ul>
+            <a href="" class="text-decoration-none">
+                <p class="text-center text-white p-2 fw-bold mt-4 ms-4" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Sing Up For Free</p>
+              </a>
+        </div>
+        <img style="float: right;" src="progresspic.png" class="d-inline-block">
+        <p class="ms-4 mt-5"><strong>Note:</strong>This is an optional feature. You can study at W3Schools without creating an account.</p>
+    </div>
+    <hr width="80%" color="black">
+    <div class="refrence">
+        <h2 class="ms-4">JavaScript References</h2><br>
+        <p class="ms-4">W3Schools maintains a complete JavaScript reference, including all HTML and browser objects.</p><br>
+        <p class="ms-4">The reference contains examples for all properties, methods and events, and is continuously updated according to the latest web standards.</p>
+        <a href="" class="text-decoration-none">
+            <p class="ms-4 text-white p-2 fw-bold mt-4 text-center" style="background-color: rgb(41, 168, 98); width: 300px; border-radius: 5px;">Complate JavaScript Refrencce</p>
+        </a>
+    </div>
+    <hr width="80%" color="black">
+    <div class="career ms-4">
+       <div class="display-4 text-white pt-3 ms-4">Kickstart your career</div>
+       <h1 class="text-white pt-3 ms-4">Get certified by completing the JavaScript courser</h1>
+       <a href="" class="text-decoration-none">
+        <p class="ms-4 text-white p-3 fw-bold mt-4 text-center" style="background-color: rgb(41, 168, 98); width: 200px; border-radius: 50px;">Get Certified</p>
+       </a>
+    </div>
+    <a href="JS Home - Copy.html" class="text-decoration-none">
+        <p class="text-white fw-bold text-center mt-3 ms-4 p-2 d-inline-block" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px;">Back</p>
+    </a>
+    <a href="JS Introduction.html" class="text-decoration-none">
+        <p class="fw-bold text-white text-center mt-3 ms-4 p-2 d-inline-block me-4" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px; float: right;">Next</p>
+    </a>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

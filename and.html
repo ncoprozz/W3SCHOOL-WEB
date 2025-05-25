@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Tutorial</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles-sql.css" />
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg main-nav fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/w3schools-logo.png" alt="logo" width="50" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Tutorials
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Exercises
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search..." />
+                        <button class="btn btn-outline-secondary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch" />
+                </div>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-graduation-cap"></i> For Teachers
+                </a>
+
+                <a href="#" class="btn text-decoration-none">
+                    <i class="fas fa-award"></i> Get Certified
+                </a>
+
+                <a href="#" class="btn btn-success">Sign Up</a>
+                <a href="#" class="btn btn-outline-success">Log in</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Language Navigation Bar -->
+    <div class="language-bar sticky-top">
+        <!-- Sidebar Toggle Button (Moved Here) -->
+        <button class="btn btn-outline-light btn-sm tgl-sidebar m-1" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a href="html-home.html">HTML</a>
+        <a href="#">CSS</a>
+        <a href="JS Home - Copy.html">JAVASCRIPT</a>
+        <a href="#" class="active">SQL</a>
+        <a href="pyhome.html">PYTHON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">XML</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="CS HOME.html">CYBERSECURITY</a>
+        <a href="#">DATA SCIENCE</a>
+        <a href="#">INTRO TO PROGRAMMING</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div id="sidebar" class="col-md-3 col-lg-2 sidebar p-0 vh-100 sticky-top overflow-auto">
+                <div class="d-flex justify-content-between align-items-center ps-3 pt-4 bg-light">
+                    <h5 class="m-0 pb-2">SQL Tutorial</h5>
+                    <button class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar"></button>
+                </div>
+                <a href="sql-home.html" class="sidebar-item ps-5">SQL HOME</a>
+                <a href="introduction.html" class="sidebar-item ps-5">SQL Intro</a>
+                <a href="syntax-sql.html" class="sidebar-item ps-5">SQL Syntax</a>
+                <a href="select.html" class="sidebar-item ps-5">SQL Select</a>
+                <a href="select_distinct.html" class="sidebar-item ps-5">SQL Select Distinct</a>
+                <a href="where.html" class="sidebar-item ps-5">SQL Where</a>
+                <a href="order_by.html" class="sidebar-item ps-5">SQL Order By</a>
+                <a href="#" class="sidebar-item ps-5 active">SQL And</a>
+                <a href="or.html" class="sidebar-item ps-5">SQL Or</a>
+                <a href="not.html" class="sidebar-item ps-5">SQL Not</a>
+                <a href="#" class="sidebar-item ps-5">SQL Insert Into</a>
+                <a href="#" class="sidebar-item ps-5">SQL Null Values</a>
+                <a href="#" class="sidebar-item ps-5">SQL Update</a>
+                <a href="#" class="sidebar-item ps-5">SQL Delete</a>
+                <a href="#" class="sidebar-item ps-5">SQL Select Top</a>
+                <a href="#" class="sidebar-item ps-5">SQL Aggregate Functions</a>
+                <a href="#" class="sidebar-item ps-5">SQL Min and Max</a>
+                <a href="#" class="sidebar-item ps-5">SQL Count</a>
+                <a href="#" class="sidebar-item ps-5">SQL Sum</a>
+                <a href="#" class="sidebar-item ps-5">SQL Avg</a>
+                <a href="#" class="sidebar-item ps-5">SQL Like</a>
+                <a href="#" class="sidebar-item ps-5">SQL Wildcards</a>
+                <a href="#" class="sidebar-item ps-5">SQL In</a>
+                <a href="#" class="sidebar-item ps-5">SQL Between</a>
+                <a href="#" class="sidebar-item ps-5">SQL Aliases</a>
+                <a href="#" class="sidebar-item ps-5">SQL Joins</a>
+                <a href="#" class="sidebar-item ps-5">SQL Inner Join</a>
+                <a href="#" class="sidebar-item ps-5">SQL Left Join</a>
+                <a href="#" class="sidebar-item ps-5">SQL Right Join</a>
+                <a href="#" class="sidebar-item ps-5">SQL Full Join</a>
+                <a href="#" class="sidebar-item ps-5">SQL Self Join</a>
+                <a href="#" class="sidebar-item ps-5">SQL Union</a>
+                <a href="#" class="sidebar-item ps-5">SQL Group By</a>
+                <a href="#" class="sidebar-item ps-5">SQL Having</a>
+                <a href="#" class="sidebar-item ps-5">SQL Exists</a>
+                <a href="#" class="sidebar-item ps-5">SQL Any, All</a>
+                <a href="#" class="sidebar-item ps-5">SQL Select Into</a>
+                <a href="#" class="sidebar-item ps-5">SQL Insert Into Select</a>
+                <a href="#" class="sidebar-item ps-5">SQL Case</a>
+                <a href="#" class="sidebar-item ps-5">SQL Null Functions</a>
+                <a href="#" class="sidebar-item ps-5">SQL Stored Procedures</a>
+                <a href="#" class="sidebar-item ps-5">SQL Comments</a>
+                <a href="#" class="sidebar-item ps-5">SQL Operators</a>
+
+                <h5 class="ps-3 pt-4">SQL Database</h5>
+                <a href="#" class="sidebar-item ps-5">SQL Create DB</a>
+                <a href="#" class="sidebar-item ps-5">SQL Drop DB</a>
+                <a href="#" class="sidebar-item ps-5">SQL Backup DB</a>
+                <a href="#" class="sidebar-item ps-5">SQL Create Table</a>
+                <a href="#" class="sidebar-item ps-5">SQL Drop Table</a>
+                <a href="#" class="sidebar-item ps-5">SQL Alter Table</a>
+                <a href="#" class="sidebar-item ps-5">SQL Constraints</a>
+                <a href="#" class="sidebar-item ps-5">SQL Not Null</a>
+                <a href="#" class="sidebar-item ps-5">SQL Unique</a>
+                <a href="#" class="sidebar-item ps-5">SQL Primary Key</a>
+                <a href="#" class="sidebar-item ps-5">SQL Foreign Key</a>
+                <a href="#" class="sidebar-item ps-5">SQL Check</a>
+                <a href="#" class="sidebar-item ps-5">SQL Default</a>
+                <a href="#" class="sidebar-item ps-5">SQL Index</a>
+                <a href="#" class="sidebar-item ps-5">SQL Auto Increment</a>
+                <a href="#" class="sidebar-item ps-5">SQL Dates</a>
+                <a href="#" class="sidebar-item ps-5">SQL Views</a>
+                <a href="#" class="sidebar-item ps-5">SQL Injection</a>
+                <a href="#" class="sidebar-item ps-5">SQL Hosting</a>
+                <a href="#" class="sidebar-item ps-5">SQL Data Types</a>
+
+                <h5 class="ps-3 pt-4">SQL References</h5>
+                <a href="#" class="sidebar-item ps-5">SQL Keywords</a>
+                <a href="#" class="sidebar-item ps-5">MySQL Functions</a>
+                <a href="#" class="sidebar-item ps-5">SQL Server Functions</a>
+                <a href="#" class="sidebar-item ps-5">MS Access Functions</a>
+                <a href="#" class="sidebar-item ps-5">SQL Quick Ref</a>
+
+                <h5 class="ps-3 pt-4">SQL Examples</h5>
+                <a href="#" class="sidebar-item ps-5">SQL Examples</a>
+                <a href="#" class="sidebar-item ps-5">SQL Editor</a>
+                <a href="#" class="sidebar-item ps-5">SQL Quiz</a>
+                <a href="#" class="sidebar-item ps-5">SQL Exercises</a>
+                <a href="#" class="sidebar-item ps-5">SQL Server</a>
+                <a href="#" class="sidebar-item ps-5">SQL Syllabus</a>
+                <a href="#" class="sidebar-item ps-5">SQL Study Plan</a>
+                <a href="#" class="sidebar-item ps-5">SQL Bootcamp</a>
+                <a href="#" class="sidebar-item ps-5">SQL Certificate</a>
+                <a href="#" class="sidebar-item ps-5">SQL Training</a>
+            </div>
+
+            <!-- Main Content + Sidebar Kanan -->
+            <div class="col-md-9 col-lg-10">
+                <div class="row">
+                    <!-- Konten Utama -->
+                    <div class="col-md-9 col-lg-10 p-5 main-content">
+                        <h1 class="mb-4 mt-5">SQL AND Operator
+                        </h1>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <a href="order_by.html" class="nav-btn">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </a>
+                            <a href="or.html" class="nav-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>The SQL AND Operator
+                            </h2><br>
+                            <p>
+                                The <code>WHERE</code> clause can contain one or many <code>AND</code> operators. <br><br>
+                                The <code>AND</code> operator is used to filter records based on more than one condition,
+                                like if you want to return all customers from Spain that start with the letter 'G':
+                              </p>
+                            <div class="p-4 border position-relative" style="background-color: rgb(225, 225, 225)">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="m-0">Example</h4>
+                                    <button class="btn btn-dark">
+                                        Get your own SQL Server
+                                    </button>
+                                </div>
+                                <p>Select all customers from Spain that starts with the letter 'G':
+                                </p>
+                                <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                    <code>
+                                        SELECT * <br>
+                                        FROM Customers <br>
+                                        WHERE Country = 'Spain' AND CustomerName LIKE 'G%'; <br>
+                                    </code>
+                                </div>
+                                <a href="#" class="btn btn-success mt-3">Try it Yourself »</a>
+                            </div>
+                           
+                        </div>
+                        
+                        <hr class="mt-4" />
+                        
+                        <div class="mt-4">
+                            <h2>Syntax
+                            </h2>
+                            <br />
+                            <div class="p-4 border position-relative" style="background-color: rgb(225, 225, 225)">
+                                <code class="text-dark">
+                                    SELECT column1, column2, ... <br>
+                                    FROM table_name <br>
+                                    WHERE condition1 AND condition2 AND condition3 ...;
+                                </code>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+                        
+                        <div class="mt-4">
+                            <h2>Syntax
+                            </h2>
+                            <br />
+                            <div class="w-100 p-4 rounded" style="background-color: rgb(247, 247, 195)">
+                                <p class="mt-3 ms-3">The <code>AND</code> operator displays a record if all the conditions are TRUE.
+                                    <br><br>
+                                    The <code>OR</code> operator displays a record if any of the conditions are TRUE.
+                                </p>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>Demo Database
+                            </h2>
+                            <br />
+                          
+                            <p>Below is a selection from the <a href="#" class="text-dark"><b>Customers</b></a> table used in the examples:
+
+                            </p>
+                            <br>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr class="table-light">
+                                      <th>CustomerID</th>
+                                      <th>CustomerName</th>
+                                      <th>ContactName</th>
+                                      <th>Address</th>
+                                      <th>City</th>
+                                      <th>PostalCode</th>
+                                      <th>Country</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="table-secondary">
+                                      <td>1</td>
+                                      <td>Alfreds Futterkiste</td>
+                                      <td>Maria Anders</td>
+                                      <td>Obere Str. 57</td>
+                                      <td>Berlin</td>
+                                      <td>12209</td>
+                                      <td>Germany</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>Ana Trujillo Emparedados y helados</td>
+                                      <td>Ana Trujillo</td>
+                                      <td>Avda. de la Constitución 2222</td>
+                                      <td>México D.F.</td>
+                                      <td>05021</td>
+                                      <td>Mexico</td>
+                                    </tr>
+                                    <tr class="table-secondary">
+                                      <td>3</td>
+                                      <td>Antonio Moreno Taquería</td>
+                                      <td>Antonio Moreno</td>
+                                      <td>Mataderos 2312</td>
+                                      <td>México D.F.</td>
+                                      <td>05023</td>
+                                      <td>Mexico</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>Around the Horn</td>
+                                      <td>Thomas Hardy</td>
+                                      <td>120 Hanover Sq.</td>
+                                      <td>London</td>
+                                      <td>WA1 1DP</td>
+                                      <td>UK</td>
+                                    </tr>
+                                    <tr class="table-secondary">
+                                      <td>5</td>
+                                      <td>Berglunds snabbköp</td>
+                                      <td>Christina Berglund</td>
+                                      <td>Berguvsvägen 8</td>
+                                      <td>Luleå</td>
+                                      <td>S-958 22</td>
+                                      <td>Sweden</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                              
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>All Conditions Must Be True
+                            </h2>
+                            <br />
+
+                            <p>The following SQL statement selects all fields from <code>Customers</code> 
+                                where <code>Country</code> is "Brazil" AND <code>City</code> is "Rio de Janeiro" 
+                                AND <code>CustomerID</code> is higher than 50:
+                            </p>
+
+                            <div class="p-4 border position-relative" style="background-color: rgb(225, 225, 225)">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="m-0">Example</h4>
+                                  
+                                </div>
+                             
+                                <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                    <code>
+                                        SELECT * FROM Customers <br>
+                                        WHERE Country = 'Brazil' <br>
+                                        AND City = 'Rio de Janeiro' br
+                                        AND CustomerID > 50;
+                                    </code>
+                                </div>
+                                <a href="#" class="btn btn-success mt-3">Try it Yourself »</a>
+                            </div>
+                        </div>
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <h2>Combining AND and OR</h2> <br>
+                            <p>
+                              You can combine the <code>AND</code> and <code>OR</code> operators.
+                            </p>
+                            <p>
+                              The following SQL statement selects all customers from Spain that starts with a "G" or an "R".
+                            </p>
+                            <p>
+                              Make sure you use parentheses to get the correct result.
+                            </p>
+                          
+                            <div class="p-4 border position-relative" style="background-color: rgb(225,225,225)">
+                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="m-0">Example</h4>
+                              </div>
+                              <p>Select all Spanish customers that starts with either "G" or "R":</p>
+                              <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                <code>
+                          SELECT * FROM Customers<br>
+                          WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+                                </code>
+                              </div>
+                              <a href="#" class="btn btn-success mt-3">Try it Yourself »</a>
+                            </div>
+                            <br>
+                            <p>Without parenthesis, the select statement will return all customers from Spain that starts with a "G", plus all customers that starts with an "R", regardless of the country value:</p>
+                          
+                            <div class="p-4 border position-relative mt-4" style="background-color: rgb(225,225,225)">
+                              <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4 class="m-0">Example</h4>
+                              </div>
+                              <p>
+                                Select all customers that either:
+                                <br>
+                                are from Spain and starts with either "G",
+                                <br>
+                                or starts with the letter "R"
+                              </p>
+                              <div class="bg-white border-start border-success border-4 ps-2 p-2">
+                                <code>
+                          SELECT * FROM Customers<br>
+                          WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
+                                </code>
+                              </div>
+                              <a href="#" class="btn btn-success mt-3">Try it Yourself »</a>
+                            </div>
+                          </div>
+
+                     
+
+                        <hr class="mt-4" />
+
+                        <div class="mt-4">
+                            <div class="p-5 rounded" style="background-color: #2b3648">
+                                <div class="text-center mb-4">
+                                    <h2 class="text-white d-inline-block">Exercise</h2>
+                                    <span class="badge rounded-circle bg-secondary text-white ms-2">?</span>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <p class="text-white">
+                                        Which SQL keyword is used to filter records based on multiple conditions?
+                                    </p>
+                                </div>
+
+                                <div class="mb-2">
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer1" class="me-2" />
+                                        <label for="answer1">WHERE
+                        </label>
+                                    </div>
+
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer2" class="me-2" />
+                                        <label for="answer2">FILTER
+                        </label>
+                                    </div>
+
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer3" class="me-2" />
+                                        <label for="answer3">MULTI
+                        </label>
+                                    </div>
+
+                                    <div class="p-3 mb-2 bg-secondary bg-opacity-25 rounded text-white">
+                                        <input type="radio" name="answer" id="answer4" class="me-2" />
+                                        <label for="answer4">IN
+                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-success px-4 py-2">
+                                        Submit Answer »
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
+
+
+                    <hr class="mt-4" />
+
+                    <div class="mt-4">
+
+                        <h2 class="mt-5 text-center">Video: SQL AND Operator
+                        </h2>
+                        <a href="https://youtu.be/r1V39Iia4j0&list=PLP9IO4UYNF0UQkBXlTMSw0CYsxv-GDkkI" target="_blank">
+                            <img src="https://www.w3schools.com/sql/images/img_sql_and.webp" class="w-100" alt="intro">
+                        </a>
+
+                        <div class="d-flex justify-content-between mt-5 mb-4">
+                            <a href="order_by.html" class="nav-btn">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </a>
+                            <a href="or.html" class="nav-btn">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-dark p-4 d-flex flex-column flex-md-row align-items-center justify-content-between rounded shadow-lg position-relative text-center text-md-start w-100">
+                            <h3 class="fw-bold text-white m-3">
+                                Track Your Progress - it's free!
+                            </h3>
+                            <div class="d-flex flex-column flex-sm-row gap-3">
+                                <a href="#" class="btn btn-success">Sign Up</a>
+                                <a href="#" class="btn btn-outline-success">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Kanan -->
+                <div class="col-md-2 mt-5">
+                    <div class="card mb-4 mt-5">
+                        <img src="img/advertise.png" alt="Learning Resources" class="card-img-top" />
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">COLOR PICKER</div>
+                        <div class="card-body">
+                            <img src="img/color.png" alt="color" width="100" />
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="py-5" style="background-color: #272b37; color: white">
+        <div class="container">
+            <!-- Top Navigation Menus -->
+            <div class="row mb-5 w-100 justify-content-center">
+                <!-- Logo Column -->
+                <div
+                    class="mb-5 mx-5 w-100 d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 text-center">
+                    <a href="#" class="text-decoration-none">
+                        <img src="img/w3schools-logo.png" alt="W3Schools" width="80" />
+                    </a>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">PLUS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">SPACES</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">GET CERTIFIED</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR TEACHER</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">FOR BUSINESS</a>
+                        <a href="#" class="p-2 fs-5 fw-bold text-warning text-decoration-none">CONTACT US</a>
+                    </div>
+                </div>
+
+                <!-- Menu Columns -->
+                <div class="col-lg-9 text-center">
+                    <div class="row">
+                        <!-- Menu 1: Top Tutorials -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Tutorials</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Tutorial</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Tutorial</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 2: Top References -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top References</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Colors</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Angular Reference</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Reference</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 3: Top Examples -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Top Examples</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">How To Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">W3.CSS Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Bootstrap Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Examples</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Menu 4: Get Certified -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold mb-3">Get Certified</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">HTML Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">CSS Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">JavaScript Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Front End Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">SQL Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Python Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">PHP Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">jQuery Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">Java Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C++ Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">C# Certificate</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none text-white-50">XML Certificate</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="text-center mb-4">
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-youtube text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-linkedin text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-discord text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-facebook text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2">
+                    <i class="fab fa-instagram text-white"></i>
+                </a>
+                <a href="#" class="text-decoration-none mx-2 text-white">FORUM</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ABOUT</a>
+                <a href="#" class="text-decoration-none mx-2 text-white">ACADEMY</a>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-center text-white-50 mb-3">
+                <p>
+                    W3Schools is optimized for learning and training. Examples might be
+                    simplified to improve reading and learning. Tutorials, references,
+                    and examples are constantly reviewed to avoid errors, but we cannot
+                    warrant full correctness of all content. While using W3Schools, you
+                    agree to have read and accepted our
+                    <a href="#" class="text-white-50">terms of use</a>,
+                    <a href="#" class="text-white-50">cookie and privacy policy</a>.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-white-50">
+                <p>
+                    Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools
+                    is Powered by W3.CSS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script-sql.js"></script>
+</body>
+
+</html>

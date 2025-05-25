@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Syntax</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .belowtopnavcontainer {
+          max-width:1750px;
+          margin:auto;
+        }
+        .contentcontainer {
+           background-color: #f5f6f7;
+        }
+        body.darkpagetheme .contentcontainer {
+           background-color: #29353e;
+        }
+        .sidebar{
+            position: fixed;
+            top: 90px;
+            overflow-y: auto;
+            background-color: #E7E9EB;
+            height: 545px;
+            width: 250px;
+        }
+        .sidebar h5{
+            margin-top: 25px;
+        }
+        .sidebar .box{
+            padding: 5px 0px;
+        }
+        .sidebar .box .in{
+            margin-left: 30px
+        }
+        .sidebar .box:hover{
+            background-color: #cccccc;
+        }
+        .nav{
+           position: fixed;
+           top: 0px;
+           height: 60px;
+           display: flex;
+           width: 100%;
+        }
+        .nav img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            margin-left: 5px;
+            
+        }
+        .nav .bar{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 19px;
+        }
+        .nav .bar a{
+            padding: 21px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav .search{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .nav .search input{ 
+            border-radius: 30px;
+            height: 40px;
+        }
+        .nav .search input:focus{
+            border: 0,5px solid rgb(68, 155, 68);
+            outline: 5px solid rgb(68, 155, 68);
+        }
+        .nav .bar2{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 20px;
+        }
+        .nav .bar2 a{
+            padding: 10px 30px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar2 a:hover{
+            background-color: #f2f2f2;
+            border-radius: 30px;
+        }
+        .nav .login1{
+           display: inline-block;
+           margin-left: 10px;
+           padding-top: 21px;
+        }
+        .nav .login1 a{
+            background-color: rgb(41, 168, 98);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2{
+           display: inline-block;
+           padding-top: 21px;
+        }
+        .nav .login2 a{
+            background-color: rgb(131, 197, 131);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2 a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav2{
+            position: fixed;
+            top: 0px;
+            background-color: #282A35;
+            width: 100%;
+            height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+            margin-top: 60px;
+        }
+        .nav2::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .nav2 .bar{
+            display: inline-block;
+            padding-top: 3px;
+        }
+        .nav2 .bar a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+        }
+        .nav2 .bar a:hover{
+            background-color: black;
+        }
+        .sidebar-right{
+          background-color: grey;
+          float: right;
+          height: 8000px;
+          width: 200px;
+        }
+        .main{
+          width: 1100px;
+          height: 3000px;
+          margin-left: 250px;
+          margin-top: 70px;
+        }
+        .main .head{
+          height: 550px;
+          width: 100%;
+        }
+        .main .head a p{
+          background-color: rgb(41, 168, 98);
+          width: 100px;
+          border-radius: 5px;
+        }
+        .main .head .items{
+          background-color: rgb(217, 238, 225);
+          height: 300px;
+          width: 850px;
+        }
+        .main .head .items a p{
+          background-color: rgb(41, 168, 98);
+          width: 300px;
+          border-radius: 5px;
+        }
+        .main .example .box{
+          background-color: rgb(231, 233, 235);
+          height: 300px;
+          width: 800px;
+          border-radius: 5px;
+        }
+        .main .example .box .box-in{
+          background-color: white;
+          border-left: 4px solid #4CAF50;
+          height: 150px;
+          width: 750px;
+        }
+        .main .learn .yellow-box{
+          background-color: rgb(255, 255, 204);
+          width: 850px;
+          height: 130px;
+        }
+        .main form{
+            background-color: #2D3748;
+            height: 450px;
+            width: 850px;
+            border-radius: 10px;
+        }
+        .main form .pilih{
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 700px;
+            height: 50px;
+            margin-left: 70px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 20px;
+        }
+        .main .info {
+        background-color: #D9EEE1;
+        border-left: none;
+        padding: 32px;
+        margin: 24px;
+        height: 350px;
+        margin-left: -32px;
+        margin-right: -32px;
+        }
+        .main .info .code {
+        width: 800px;
+        height: 250px;
+        background-color: #fff;
+        color: #000;
+        padding: 8px 12px;
+        border-left: 4px solid #4CAF50;
+        word-wrap: break-word;
+        margin-left: 30px;
+        border: 1px solid #ccc !important;
+        }
+    </style>
+    <body>
+        <div class="nav fixed-top bg-light">
+            <a href="index.html"><img src="W3Schools_logo.svg.png" alt=""></a>
+            <div class="bar">
+                <a href="Tutorial.html">Tutorial</a>
+                <a href="Excercises.html">Excercise</a>
+                <a href="Certificates.html">Certificates</a>
+                <a href="Service.html">Service</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="bar2">
+                <a href="">Spaces</a>
+                <a href="">For Teacher</a>
+                <a href="">Get Certified</a>
+            </div>
+            <div class="login1">
+                <a href="" class="text-decoration-none">Sing Up</a>
+            </div>
+            <div class="login2">
+                <a href="" class="text-decoration-none">Log In</a>
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="bar">
+                <a href="html-home.html">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#" style="background-color: rgb(41, 168, 98);">JAVASCRIPT</a>
+                <a href="sql-home.html">SQL</a>
+                <a href="pyhome.html">PHYTON</a>
+                <a href="Java_Home.html">JAVA</a>
+                <a href="#">PHP</a>
+                <a href="#">HOW TO</a>
+                <a href="#">W3.CSS</a>
+                <a href="#">C</a>
+                <a href="#">C++</a>
+                <a href="#">C#</a>
+                <a href="#">BOOTSTRAP</a>
+                <a href="#">REACT</a>
+                <a href="#">MYSQL</a>
+                <a href="#">JQUERY</a>
+                <a href="#">EXCEL</a>
+                <a href="#">DJANGO</a>
+                <a href="#">NUMPY</a>
+                <a href="#">PANDAS</a>
+                <a href="#">NODEJS</a>
+                <a href="#">DSA</a>
+                <a href="#">TYPESCRIPT</a>
+                <a href="#">ANGULAR</a>
+                <a href="#">GIT</a>
+                <a href="#">POSTGRESQL</a>
+                <a href="#">MONGODB</a>
+                <a href="#">ASP</a>
+                <a href="#">AI</a>
+                <a href="#">R</a>
+                <a href="#">GO</a>
+                <a href="#">KOTLIN</a>
+                <a href="#">SASS</a>
+                <a href="#">VUE</a>
+                <a href="#">GEN AI</a>
+                <a href="#">SCIPY</a>
+                <a href="CS HOME.html">CYBERSECURITY</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="box">
+                <a href="JS Home - Copy.html" class="text-decoration-none">
+                    <div class="in text-dark">JS HOME</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Introduction.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Introduction</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Where To.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Where To</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Output.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Output</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Statements.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Statements</div>
+              </a>
+           </div>
+           <div class="box" style="background-color: rgb(41, 168, 98); ">
+              <a href="JS Syntax.html" class="text-decoration-none">
+                  <div class="in text-light">JS Syntax</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Comments.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Comments</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Variables.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Variables</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Let.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Let</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Const.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Const</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Operators</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Arithmetic</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Assignment</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Data Type</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Function</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object properties</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object Methods</div>
+              </a>
+           </div>
+        </div>
+        <div class="sidebar-right">
+        </div>
+        <div class="main">
+            <div class="head">
+                <h1 class="ms-4 pt-4">JavaScript Syntax</h1>
+                <a href="JS Statements.html" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block">Home</p>
+                </a>
+                <a href="JS Comments.html" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block float-end me-4">Next</p>
+                </a>
+                <div class="info">
+                    <p style="font-size: 18px; margin-left: 30px;">JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+                    <div class="code">
+                        <p>var x = 5;</p>
+                        <p>var y = 6;</p>
+                        <p>var z = x + y;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="commond">
+                <h2 class="ms-5">JavaScript Values</h2>
+                <p class="ms-5">The JavaScript syntax defines two types of values:</p>
+                <ul class="ms-5">
+                    <li>Fixed values</li>
+                    <li>Variable values</li>
+                </ul>
+                <p class="ms-5">Fixed values are called <strong>Literals</strong>.</p>
+                <p class="ms-5">Variable values are called <strong>Variables</strong>.</p>
+            </div>
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">JavaScript Literals</h2>
+                <p class="ms-4">The two most important syntax rules for fixed values are:</p>
+                <p class="ms-4">1. <strong>Numbers</strong> are written with or without decimals:</p>
+                <div class="box ms-3" style="height: 250px;">
+                    <h4 class="ms-4 pt-4">Example</h4>
+                    <div class="box-in ms-4" style="height: 110px;"></div>
+                <a href="" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                </a>
+            </div>
+                <br>
+                <p class="ms-4">2. <strong>Strings</strong> are text, written within double or single quotes:</p>
+            <div class="box ms-3" style="height: 210px;">
+                <h4 class="ms-4 pt-4"></h4>
+                <div class="box-in ms-4" style="height: 100px;"> </div>
+                <a href="" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                </a>
+            </div>
+            <hr width="80%" color="black">
+                <p class="ms-4 text-center">ADVERTISEMENT</p>
+                <img style="margin-left: 300px;" src="15414673860023061897.png" alt="">
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">JavaScript Variables</h2>
+                <p class="ms-4">In a programming language, <strong>variables</strong> are used to <strong>store</strong> data values.</p>
+                <p class="ms-4">JavaScript uses the keywords <code>var</code>, <code>let</code> and <code>const</code> to <strong>declare</strong> variables.</p>
+                <p class="ms-4">An <strong>equal sign</strong> is used to <strong>assign values</strong> to variables.</p>
+                <p class="ms-4">In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
+            <div class="box ms-3" style="height: 200px;">
+                <h4 class="ms-4 pt-4">Example</h4>
+            <div class="box-in ms-4" style="height: 70px;"></div>
+                <a href="" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                </a>
+            </div>
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">JavaScript Operators</h2>
+                <p class="ms-4">JavaScript uses <strong>arithmetic operators</strong> ( <code>+ - * /</code> ) to <strong>compute</strong> values:</p>
+                <div class="box ms-3" style="height: 135px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                        <div class="box-in ms-4" style="height: 35px;"></div>
+                          <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+            </div>
+            <br>
+            <p class="ms-4">JavaScript uses an <strong>assignment operator</strong> ( <code>=</code> ) to <strong>assign</strong> values to variables:</p>
+            <div class="box ms-3" style="height: 200px;">
+                <h4 class="ms-4 pt-4"></h4>
+                    <div class="box-in ms-4" style="height: 100px;"> </div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                        </a>
+            </div>
+            <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">JavaScript Expressions</h2>
+                        <p class="ms-4">An expression is a combination of values, variables, and operators, which computes to a value.</p>
+                        <p class="ms-4">The computation is called an evaluation.</p>
+                        <p class="ms-4">For example, 5 * 10 evaluates to 50:</p>
+                <div class="box ms-3" style="height: 135px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                        <div class="box-in ms-4" style="height: 35px;"></div>
+                            <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                            </a>
+                </div>
+                <br>
+                <p class="ms-4">Expressions can also contain variable values:</p>
+                <div class="box ms-3" style="height: 135px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                    <div class="box-in ms-4" style="height: 35px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                        </a>
+                </div>
+                <br>
+                <p class="ms-4">The values can be of various types, such as numbers and strings.</p>
+                <p class="ms-4">For example, "John" + " " + "Doe", evaluates to "John Doe":</p>
+                <div class="box ms-3" style="height: 135px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                    <div class="box-in ms-4" style="height: 35px;"></div>
+                        <a href="" class="text-decoration-none">
+                        <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                        </a>
+                    </div>
+                <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">JavaScript Keywords</h2>
+                    <p class="ms-4">JavaScript <strong>keywords</strong> are used to identify actions to be performed.</p>
+                        <p class="ms-4">The <code>let</code> keyword tells the browser to create variables:</p>
+                        <div class="box ms-3" style="height: 190px;">
+                            <h4 class="ms-4 pt-4"></h4>
+                            <div class="box-in ms-4" style="height: 90px;"></div>
+                            <a href="" class="text-decoration-none">
+                                <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                            </a>
+                </div>
+                <br>
+                <p class="ms-4">The <code>var</code> keyword also tells the browser to create variables:</p>
+                <div class="box ms-3" style="height: 190px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                    <div class="box-in ms-4" style="height: 90px;"> </div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                        </a>
+                </div> <br>
+                <div class="learn">
+                <div class="yellow-box ms-1 pt-4" style="height: 110px;">
+                    <p class="ms-4">In these examples, using <code>var</code> or <code>let</code> will produce the same result.</p>
+                    <p class="ms-4">You will learn more about <code>var</code> or <code>let</code> later in this tutorial.</p>
+                    </div>
+                </div>
+                <hr width="80%" color="black">
+                <div class="example">
+                <h2 class="ms-4">JavaScript Comments</h2>
+                    <p class="ms-4">Not all JavaScript statements are "executed".</p>
+                    <p class="ms-4">Code after double slashes <code>//</code> or between <code>/*</code> and <code>/*</code> is treated as a <strong>comment</strong>.</p>
+                    <p class="ms-4">This statement tells the browser to write "Hello Dolly." inside an HTML element with id="demo":</p>
+                        <div class="box ms-3" style="height: 200px;">
+                            <h4 class="ms-4 pt-4"></h4>
+                                <div class="box-in ms-4" style="height: 90px;"></div>
+                                      <a href="" class="text-decoration-none">
+                                        <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                                      </a>
+                </div>
+                <br>
+                <div class="learn">
+                <div class="yellow-box ms-1 pt-4" style="height: 90px;">
+                    <p class="ms-4" style= "margin-top: 10px; margin-bottom: 16px;">You will learn more about comments in a later chapter.</p>
+                    </div>
+                </div>
+                <hr width="80%" color="black">
+                <div class="commond">
+                    <h2 class="ms-4">JavaScript Identifiers / Names</h2>
+                        <p class="ms-4">Identifiers are JavaScript names.</p>
+                        <p class="ms-4">Identifiers are used to name variables and keywords, and functions.</p>
+                        <p class="ms-4">The rules for legal names are the same in most programming languages.</p>
+                        <p class="ms-4">A JavaScript name must begin with:.</p>
+                            <ul class="ms-5">
+                                <li>A letter (A-Z or a-z)</li>
+                                <li>A dollar sign ($)</li>
+                                <li>Or an underscore (_)</li>
+                            </ul>
+                            <p class="ms-4">Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
+                </div>
+                <div class="learn">
+                <div class="yellow-box ms-1 pt-4" style="height: 180px;">
+                    <h2 class="ms-4" style= "margin-top: 10px; margin-bottom: 16px;">Note</h2>
+                            <p class="ms-4" style= "margin-top: 10px; margin-bottom: 16px;">Numbers are not allowed as the first character in names.</p>
+                            <p class="ms-4" style= "margin-top: 10px; margin-bottom: 16px;">This way JavaScript can easily distinguish identifiers from numbers.</p>
+                    </div>
+                </div>
+                <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">JavaScript is Case Sensitive</h2>
+                    <p class="ms-4">All JavaScript identifiers are <strong>case sensitive</strong>.</p>
+                    <p class="ms-4">The variables <code>lastName</code> and <code>lastname</code>, are two different variables:</p>
+                <div class="box ms-3" style="height: 190px;">
+                    <h4 class="ms-4 pt-4"></h4>
+                    <div class="box-in ms-4" style="height: 90px;"></div>
+                        <a href="" class="text-decoration-none">
+                             <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                        </a>
+                </div>
+                <br>
+                <p class="ms-4">JavaScript does not interpret <strong>LET</strong> or <strong>Let</strong> as the keyword <strong>let</strong>.</p>
+                <hr width="80%" color="black">
+                <h2 class="ms-4">JavaScript and Camel Case</h2>
+                <p class="ms-4">Historically, programmers have used different ways of joining multiple words into one variable name:</p>
+                <p class="ms-4"><strong>Hyphens:</strong></p>
+                <p class="ms-4">first-name, last-name, master-card, inter-city.</p>
+                <div class="learn">
+                    <div class="yellow-box ms-1 pt-4" style="height: 90px;">
+                                <p class="ms-4" style= "margin-top: 10px; margin-bottom: 16px;">Hyphens are not allowed in JavaScript. They are reserved for subtractions.</p>
+                    </div>
+                </div>
+                <p class="ms-4"><strong>Underscore:</strong></p>
+                <p class="ms-4">first_name, last_name, master_card, inter_city.</p>
+                <p class="ms-4"><strong>Upper Camel Case (Pascal Case):</strong></p>
+                <p class="ms-4">FirstName, LastName, MasterCard, InterCity.</p>
+                <p class="ms-4"><strong>Lower Camel Case:</strong></p>
+                <p class="ms-4">JavaScript programmers tend to use camel case that starts with a lowercase letter:</p>
+                <p class="ms-4">firstName, lastName, masterCard, interCity.</p>
+                <hr width="80%" color="black">
+                <h2 class="ms-4">JavaScript Character Set</h2>
+                <p class="ms-4">JavaScript uses the <strong>Unicode</strong> character set.</p>
+                <p class="ms-4">Unicode covers (almost) all the characters, punctuations, and symbols in the world.</p>
+                <p class="ms-4">For a closer look, please study our <a href="" class="text-dark">Complete Unicode Reference.</a></p>
+                <hr width="80%" color="black">
+                <div class="java-exercises">
+                    <form class="ms-4" style="height: 430px; width: 840px;">
+                        <h2 class="text-white text-center pt-4">Excercises</h2>
+                        <p class="text-white text-center">What is a correct syntax for assigning a value to a variable?</p>
+                        <div class="pilih">
+                         <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x : 5</p>
+                        </div>
+                        <div class="pilih mt-2">
+                         <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x = 5</p>
+                        </div>
+                        <div class="pilih mt-2">
+                         <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x == 5</p>
+                        </div>
+                        <div class="pilih mt-2">
+                         <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">x -> 5</p>
+                        </div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center mt-4 p-2 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 200px; margin-left: 35%;">Submit Answer <i class="fa-solid fa-angles-right"></i></p>
+                        </a>
+                     </form>
+                     <hr width="80%" color="black">
+                     <h2 class="ms-4 text-center">Video: JavaScript Syntax</h2>
+                     <a href="https://www.youtube.com/watch?v=4BBlc_qDs8g&list=PLP9IO4UYNF0WWmZpE3W33vVPRl2GvjEqz"><img style="margin-left: 70px;" src="Screenshot 2025-04-11 182130.png" alt=""></a>
+                  </div>
+                  <hr width="80%" color="black">
+                  <a href="JS Statements.html" class="text-decoration-none">
+                    <p class="text-white fw-bold text-center mt-3 ms-4 p-2 d-inline-block" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px;">Back</p>
+                </a>
+                <a href="JS Comments.html" class="text-decoration-none">
+                    <p class="fw-bold text-white text-center mt-3 ms-4 p-2 d-inline-block me-4" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px; float: right;">Next</p>
+                </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS Firewall</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/53cbf3eb97.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css" />
+    <link href="CS Firewall.css" rel="stylesheet" />
+    <style>
+      .main {
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 1070px;
+    height: 9000px;
+    background-color: rgb(255, 255, 255);
+    }
+    .sidebar-right {
+    background-color: rgb(221, 220, 220);
+    margin-top: 50px;
+    float: right;
+    width: 190px;
+    height: 9000px;
+    border-left: black;
+    }
+     p, th, td, li {
+            font-family: Verdana, sans-serif;
+            }
+            h1, h2, h3, h4, h5, h6 {
+            font-family: "Segoe UI", sans-serif;
+            }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="padding: 0">
+      <div class="container-fluid">
+        <!--Logo-->
+        <a class="navbar-brand" href="index.html">
+          <img src="https://www.w3schools.com/images/w3schools_logo_436_2.png" alt="W3Schools" height="50" />
+        </a>
+
+        <!--toggle-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Menu-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto" style="align-items: center">
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tutorials </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Exercises </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Certificates </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <div class="input-group">
+                <input type="text" class="form-control rounded-pill" style="font-size: 12px; font-style: italic" placeholder="Search..." aria-label="Search" />
+                <button class="btn rounded-pill py-1 px-2" style="right: 32px" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </li>
+            <li class="nav-item mode-btn">
+              <button class="btn rounded-pill py-1 px-2"><i class="bi bi-circle-half"></i></button>
+            </li>
+          </ul>
+          <ul class="navbar-nav" style="color: black">
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-stars" style="color: #9b68f6"></i> Plus</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><span style="font-weight: 800; color: #9b68f6">&lt;/&gt;</span> Spaces</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-mortarboard-fill" style="color: #9b68f6"></i> For Teachers</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-cart3" style="color: #9b68f6"></i> Get Certified</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-btn">
+            <li class="nav-item">
+              <button class="btn btn-custom btn-signup" style="color: white">Sign Up</button>
+              <button class="btn btn-custom btn-login">Log In</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Horizontal nav menu -->
+<div class="nav2 position-fixed" style="top: 50px; z-index: 1030">
+      <div class="bar">
+        <a href="html-home.html">HTML</a>
+        <a href="#">CSS</a>
+        <a href="JS Home - Copy.html">JAVASCRIPT</a>
+        <a href="sql-home.html">SQL</a>
+        <a href="pyhome.html">PHYTON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="#" style="background-color: rgb(41, 168, 98)">CYBERSECURITY</a>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar vh-150" style="padding-bottom: 110px; top: 90px">
+      <h5 class="ms-3">Cyber Security</h5>
+      <div class="box">
+        <a href="CS HOME.html" class="text-decoration-none">
+          <div class="in text-dark" data-bs-target="#cs-home">CS Home</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="Cyber Crime.html" class="text-decoration-none">
+          <div class="in text-dark" data-bs-target="#cs-cyber">CS Cyber Crime</div>
+        </a>
+      </div>
+      <div class="box" >
+        <a href="CS Money Making Threats.html" class="text-decoration-none">
+          <div class="in text-dark">CS Money Making Threats</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Dark Web.html" class="text-decoration-none">
+          <div class="in text-dark">CS Dark Web</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Networking</h5>
+      <div class="box">
+        <a href="Cyber Security Networking Basics.html" class="text-decoration-none">
+          <div class="in text-dark">CS Networking Basics</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Layer.html" class="text-decoration-none">
+          <div class="in text-dark">CS Network Layer</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Transport.html" class="text-decoration-none">
+          <div class="in text-dark">CS Network Transport</div>
+        </a>
+      </div>
+      <div class="box" style="background-color: rgb(41, 168, 98)">
+        <a href="CS Firewall.html" class="text-decoration-none">
+          <div class="in text-light">CS Firewall</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Web Aplication.html" class="text-decoration-none">
+          <div class="in text-dark">CS Web Applications</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Attacks</h5>
+      <div class="box">
+        <a href="CS_Mapping_Port_Scanning.html" class="text-decoration-none">
+          <div class="in text-dark" style="font-size: 14px">CS Mapping & Port Scanning</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Network Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Web Application Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS WIFI Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Passwords</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Penetration Testing & Social Engineering</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Defence</h5>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Security Operations</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Incident Response</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">Quiz and Certificate</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Quiz</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Syllabus</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Study Plan</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Certificate</div>
+        </a>
+      </div>
+    </div>
+    <!-- Advertise -->
+    <div class="sidebar-right"></div>
+
+    <!-- Main-Content -->
+
+    <div class="main" id="cs-cyber">
+      <div class="text-dark">
+        <h1 class="ms-4" style="padding-top: 100px">Cyber Security Firewalls</h1>
+        <div class="d-flex justify-content-between">
+          <a href="CS Network Transport.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center"><i class="fa-solid fa-chevron-left"></i> Previous</p>
+          </a>
+          <a href="CS Web Aplication.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center">Next <i class="fa-solid fa-chevron-right"></i></p>
+          </a>
+        </div>
+        <hr />
+    <h2 class="ms-4">The Dark Web</h2>
+    <p class="ms-4">Firewalls are a central architectural element to any network. They are designed to keep out all network traffic, except traffic which we allow. Firewalls operate on Layer 4, typically controlling TCP and UDP access to internal assets. Next-Generation Firewalls operate on all the layers of the OSI model, including Layer 7.</p>
+    <p class="ms-4">Traffic entering a network, e.g. through a Firewall, is called ingress traffic. Traffic leaving is called egress.</p>
+    <hr />
+    <h2 class="ms-4">Layer 4 Firewall</h2>
+    <p class="ms-4">The traditional Firewall is a Layer 4 Firewall with features such as:</p>
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">NAT</li>
+        <li style="margin-left: 40px;">Routing</li>
+        <li style="margin-left: 40px;">Blocking or Allowing traffic</li>
+        <li style="margin-left: 40px;">Track active network connections</li>
+        <li style="margin-left: 40px;">Support VPN connections</li>
+      </ul>
+    </p>
+
+    <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-4" style="font-size: 15px">Note: These Firewalls are typically cheaper and offers more throughput on the network than a more modern Next-Generation Firewall.</p>
+          </div>
+        </div>
+    </div>
+    <h2 class="ms-4">NGFW ("Next-Generation Firewalls")</h2>
+    <p class="ms-4">A modern Firewall has capabilities that range much wider than a a Layer 4 Firewall. These capabilities are typically security features.</p>
+    <p class="ms-4">A NGFW Firewall can also track active network connections, but is also typically capable of tracking:</p>
+    
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">Locations via geo-location databases. This means the Firewall can make blocking or allow actions based on the location of users. Location services are not always accurate and can often easily be bypassed using VPN services or by using other services like jump stations for attacks.</li>
+        <li style="margin-left: 40px;">Users</li>
+        <li style="margin-left: 40px;">Applications</li>
+        <li style="margin-left: 40px;">Sessions</li>
+        <li style="margin-left: 40px;">Ports and services</li>
+        <li style="margin-left: 40px;">IP addresses</li>
+      </ul>
+    </p>
+
+    <p class="ms-4">Other features of a NGFW includes:</p>
+
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">Identify and control applications on the network</li>
+        <li style="margin-left: 40px;">It can be virtualized to run as a software Firewall.</li>
+        <li style="margin-left: 40px;">Often offers simple and intuitive management.</li>
+        <li style="margin-left: 40px;">Supports protecting against known threats via ("Intrusion Prevention System").</li>
+        <li style="margin-left: 40px;">Potential to detect and prevent unknown threats via sandboxing solutions.</li>
+        <li style="margin-left: 40px;">Offers a potential to manage unknown traffic, e.g. traffic which cannot be attributed to an application.</li>
+        <li style="margin-left: 40px;">Capabilities to terminate and inspect encrypted traffic.</li>
+        <li style="margin-left: 40px;">an control users, not just system via respective IP addresses.</li>
+      </ul>
+    </p>
+    <img src="img_firewalls-1.png" class="ms-4" style="height: 340px;">
+
+    <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-4" style="font-size: 15px">Note: Which features your NGFW comes with often greatly depends on which licenses have been purchased and the capacity of the hardware running the Firewall.</p>
+          </div>
+        </div>
+    </div>
+<hr />
+    <h2 class="ms-4">Firewall Administration</h2>
+    <p class="ms-4">A Firewall can typically be administered via a proprietary management application, or via a web-browser accessing the Firewalls management via HTTP.</p>
+    <p class="ms-4">Management ports to Firewalls, including other management services of an organization, should ideally be segmented away from regular user access. Ideally the segmentation of management services is connected to an organizations user directory, for example Active Directory for Windows environments.</p>
+<hr>    
+<h2 class="ms-4">Segmentation</h2>
+<p class="ms-4">Firewalls can segment traffic between hosts and systems into segments, sometimes called zones. Each segment holds services which are allowed to communicate between one another.</p>
+<img src="img_firewall-segmentation.svg" class="ms-4" style="height: 210px;">
+<p class="ms-4">Any connection to or from the segment should be carefully controlled by the Firewall, preventing any unauthorized connections to make successful connections. Smaller segments offer more segregation, but requires more management.</p>
+<p class="ms-4">Without any segmentation, users and systems can talk directly to each other without the Firewalls enforcement. This is called a flat network.</p>
+
+<div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-4" style="font-size: 15px">Note: A very common user directory is Microsoft's Windows Active Directory. It holds information about which users, computers and groupings the organization holds.</p>
+          </div>
+        </div>
+    </div>
+    <img src="img_more-segmentation.svg" class="ms-4" style="height: 480px;">
+    <p class="ms-4">The best and most secure kind of segmentation is called zero-trust architecture, forcing all systems on the network to explicitly be allowed to communicate to different services.</p>
+    <p class="ms-4">To ease management of Firewall rules, the Firewall management is ideally connected to the organizations user directory. This can allow Firewall administrators to create careful rules based on employee responsibilities, allowing the organization to add and remove permissions which are applied on the network without asking the Firewall administrators for changes anytime there is a role change. This is sometimes called user-based policy control. Examples include:</p>
+
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">IT-Administrators should be able to use management protocols to the different services.</li>
+        <li style="margin-left: 40px;">HR employees should be allowed to access HTTPS to the HR platforms.</li>
+        <li style="margin-left: 40px;">Helpdesk employees can only access helpdesk related services.</li>
+        <li style="margin-left: 40px;">Unrecognizable users can be identified and provisioned accordingly.</li>
+      </ul>
+    </p>
+
+    <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-4" style="font-size: 15px">Note: A very common user directory is Microsoft's Windows Active Directory. It holds information about which users, computers and groupings the organization holds.</p>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <h2 class="ms-4">IPS ("Intrusion Prevention System") and IDS ("Intrusion Detection System")</h2>
+    <p class="ms-4">Sometimes IPS and IDS systems are deployed as stand-alone systems on the network, but very often they are included in a NGFW.</p>
+    <p class="ms-4">IPS and IDS systems have signatures, algorithms and heuristics to detect attacks on the network or host. An IDS or IPS deployed on a host is called a HIDS ("Host Intrusion Detection System").</p>
+    <img src="img_ips.svg" class="ms-4" style="height: 590px;">
+    <p class="ms-4">In this course the term IDS and IPS is used interchangeably as the difference between them is often just a matter of configuration of how they operate. An IPS system is positioned in such a way it can detect and block threats, while an IDS system is only capable of detecting threats.</p>
+    <p class="ms-4">IPS systems can be used to detect and block attackers and often rely on frequent updates and inspection in encrypted traffic.</p>
+
+    <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-4" style="font-size: 15px">Note: A very useful feature of IDS and IPS is the frequent updates of new signatures of developing threats from the vendors. This allows defenders some reassurance that new threats will be blocked as the firewall is updated with new updates.</p>
+          </div>
+        </div>
+    </div>
+<hr>
+<h2 class="ms-4">Content and Application Filtering</h2>
+<p class="ms-4">The Firewall can make attempts in understanding which applications and content is traversing the network. Such detection can further activate other security features like IPS to protect the systems between the Firewall.</p>
+<h3 class="ms-4">URL Filtering</h3>
+<p class="ms-4">NGFW can also protect content accessed via HTTP. The Firewall can look up domains in a database containing lists of domains and respective categorization. Firewall can then enforce only acceptable categories of domains are allowed by users, for example news is allowed while gambling is not.</p>
+<img src="img_urlfiltering.svg" class="ms-3 mt-3" style="height: 350px;">
+<p class="ms-4 mt-3">Elements such as domain age and validity could also be checked, preventing users from visiting domains which has recently been created and not yet categorized, or checking for fraudulent activities by analyzing the content of the domain.</p>
+<p class="ms-4">Instead of rejecting access to websites, the Firewall could intercept the request and send the user to what is called a captive web portal. On this portal the user could be warned about immediate danger or the violation of company policy in e.g. visiting unacceptable content. In some cases you could allow the user to provide a reason why they need to access the content, then let them continue if they have provided a reason.</p>
+<p class="ms-4">Categories within domains can be many, for example websites hosting content related to:</p>
+
+<p>
+      <ul>
+        <li style="margin-left: 40px;">Hacking</li>
+        <li style="margin-left: 40px;">Nudity</li>
+        <li style="margin-left: 40px;">Violence</li>
+        <li style="margin-left: 40px;">Phishing</li>
+        <li style="margin-left: 40px;">Dating</li>
+        <li style="margin-left: 40px;">Instant Messaging</li>
+        <li style="margin-left: 40px;">Entertainment</li>
+        <li style="margin-left: 40px;">Anonymizing services</li>
+      </ul>
+    </p>
+    <img src="img_urlfiltering-categories.png" class="ms-4" style="height: 500px;">
+    <hr>
+    <h2 class="ms-4">Applications</h2>
+    <p class="ms-4">The Firewall can try to determine which applications are in use, not just the protocols. Many protocols are capable of carrying other applications, for example HTTP can hold thousands of different applications. A Firewall can try to decode the network streams on Layer 4 and try to determine the content which is presented on Layer 7.</p>
+   <img src="img_content.svg" class="ms-3" style="height: 170px;">
+   <p class="ms-4 mt-3">A screenshot shows what a user could see when an application has been blocked.</p>
+   <img src="img_application-control.png" class="ms-3" style="height: 250px;">
+   <hr>
+   <h2 class="ms-4">Content Control</h2>
+   <p class="ms-4">As Applications are being identified, the Firewall could try to reveal specific content within the applications, for example content being downloaded:</p>
+   <p>
+      <ul>
+        <li style="margin-left: 40px;">Word documents</li>
+        <li style="margin-left: 40px;">Executables</li>
+        <li style="margin-left: 40px;">Source-code</li>
+        <li style="margin-left: 40px;">Scripts</li>
+      </ul>
+    </p>
+    <img src="img_contentcontrol.svg" class="ms-3" style="height: 500px;">
+    <p class="ms-4">In such files, the Firewall can try to identify malware, proprietary and confidential information not supposed to leave the network and much more.</p>
+    <p class="ms-4">The Firewall could support many different protocols and the content running through them, for example:</p>
+   
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">HTTP</li>
+        <li style="margin-left: 40px;">SMB</li>
+        <li style="margin-left: 40px;">FTP</li>
+        <li style="margin-left: 40px;">IMAP & POP3</li>
+        <li style="margin-left: 40px;">SMTP</li>
+      </ul>
+    </p>
+    <hr>
+    <h2 class="ms-4">WAF ("Web Application Firewall")</h2>
+    <p class="ms-4">While Firewalls can do a decent job, they often lack full understanding of what a protocol is capable off. Because of such, protocol specific firewalls are also developed where WAF is one of the more common ones.</p>
+    <p class="ms-4">A WAF allows more features specific to the HTTP protocol than a regular Firewall, making it more capable of stopping threats.</p>
+    <p class="ms-4">While a WAF tries to do a good job in blocking threats on HTTP, it often provides other very useful utilities for organizations making them very viable for much more than just blocking threats. Here are some examples: </p>
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">WAF can help build redundancy, that is having multiple servers to present the same service. This allows for for organizations to have a service in a higher available modus, allowing them to put a server offline while the other servers are still capable of serving users trying to access the service. This is useful as concepts like patching often requires you to restart the service, and the redundancy allows users to still access the service.</li>
+        <li style="margin-left: 40px;">A WAF can help enforce best practice security rules, for example a single place to maintain and enforce encryption, multi-factor authentication and other concepts which this class covers.</li>
+        <li style="margin-left: 40px;">It can be used to develop a single front and protection mechanism for multiple web-servers which are behind the WAF.</li>
+      </ul>
+    </p>
+      <div class=" d-flex justify-content-between m-3" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-3 ms-4" style="font-size: 15px">Note: WAF's are a much more specialized firewall to counter threats on the HTTP protocol. It also typically holds functionality which is very convenient for administrators.</p>
+          </div>
+        </div>
+    </div>
+         <div class="d-flex justify-content-between">
+          <a href="CS Network Transport.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center"><i class="fa-solid fa-chevron-left"></i> Previous</p>
+          </a>
+          <a href="CS Web Aplication.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center">Next <i class="fa-solid fa-chevron-right"></i></p>
+          </a>
+        </div>
+  </body>
+</html>

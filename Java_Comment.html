@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53cbf3eb97.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        .nav{
+           position: fixed;
+           top: 0px;
+           height: 60px;
+           display: flex;
+           width: 100%;
+        }
+        .nav img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            margin-left: 5px;
+            
+        }
+        .nav .bar{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 19px;
+        }
+        .nav .bar a{
+            padding: 21px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav .search{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .nav .search input{ 
+            border-radius: 30px;
+            height: 40px;
+        }
+        .nav .search input:focus{
+            border: 0,5px solid rgb(68, 155, 68);
+            outline: 5px solid rgb(68, 155, 68);
+        }
+        .nav .bar2{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 20px;
+        }
+        .nav .bar2 a{
+            padding: 10px 30px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar2 a:hover{
+            background-color: #f2f2f2;
+            border-radius: 30px;
+        }
+        .nav .login1{
+           display: inline-block;
+           margin-left: 10px;
+           padding-top: 21px;
+        }
+        .nav .login1 a{
+            background-color: rgb(41, 168, 98);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2{
+           display: inline-block;
+           padding-top: 21px;
+        }
+        .nav .login2 a{
+            background-color: rgb(131, 197, 131);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2 a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav2{
+            position: fixed;
+            top: 50px;
+            background-color: #282A35;
+            width: 100%;
+            height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        .nav2::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .nav2 .bar{
+            display: inline-block;
+            padding-top: 3px;
+        }
+        .nav2 .bar a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+        }
+        .nav2 .bar a:hover{
+            background-color: black;
+        }
+        .sidebar{
+            position: fixed;
+            top: 90px;
+            overflow-y: auto;
+            background-color: #E7E9EB;
+            height: 545px;
+            width: 250px;
+        }
+        .sidebar h5{
+            margin-top: 25px;
+        }
+        .sidebar .box{
+            padding: 5px 0px;
+        }
+        .sidebar .box .in{
+            margin-left: 30px
+        }
+        .sidebar .box:hover{
+            background-color: #cccccc;
+        }
+        .main{
+            margin-left: 250px;
+            margin-top: 90px;
+            width: 910px;
+            height: 2550px;
+        }
+        .main a p{
+            background-color: rgb(41, 168, 98);
+            padding: 15px;
+            width: 130px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .sidebar-right{
+            position: fixed;
+            right: 0;
+            background-color: rgb(221, 220, 220);
+            margin-top: 0px;
+            float: right;
+            width: 190px;
+            height: 100vh;
+            border-left: black;
+        }
+        .main .cmd{
+            background-color: #E7E9EB;
+            height: 100px;
+            width: 850px;
+            border-radius: 5px;
+            padding-top: 25px;
+        }
+        .main .cmd .in{
+            background-color: black;
+            height: 50px;
+            width: 800px;
+            margin-left: 25px;
+            border-left: rgb(41, 168, 98) solid 10px;
+        }
+        .main .kartu{
+            background-color: #E7E9EB;
+            height: 300px;
+            width: 850px;
+            border-radius: 5px;
+        }
+        .main .kartu .card-in{
+            background-color: white;
+            height: 150px;
+            width: 800px;
+            margin-left: 25px;
+            border-left: rgb(41, 168, 98) solid;
+        }
+        .main .kartu1{
+            background-color: #E7E9EB;
+            width: 870px;
+            height: 250px;
+        }
+        .main .kartu1 .box{
+            border-left: rgb(41, 168, 98) solid;
+            height: 150px;
+            width: 800px;
+        }
+        .main .kartu2{
+            background-color: #E7E9EB;
+            height: 100px;
+            width: 870px;
+            border-radius: 5px;
+            padding-top: 25px;
+        }
+        .main .kartu2 .card-in{
+            background-color: rgb(255, 255, 255);
+            height: 50px;
+            width: 800px;
+            margin-left: 25px;
+            border-left: rgb(41, 168, 98) solid;
+        }
+        .main  .web a .p{
+            color: black;
+            text-decoration: underline;
+        }
+        .main .web a .p:hover{
+            color: rgb(41, 168, 98);
+        }
+        .main .box-yellow{
+            background-color: #ffffcc;
+            height: 100px;
+            width: 870px;
+            border-radius: 5px;
+        }
+        .main form{
+            background-color: #2D3748;
+            height: 450px;
+            width: 850px;
+            border-radius: 10px;
+        }
+        .main form .pilih{
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 700px;
+            height: 50px;
+            margin-left: 70px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 20px;
+        }
+        .main .example a p{
+            color: rgb(0, 0, 0);
+            width: 200px;
+            background-color: #cccccc;
+        }
+        .main .track{
+            background-color: #282A35;
+            height: 150px;
+            width: 850px;
+            border-radius: 10px;
+        }
+        .main .track .login2 a p{
+            background-color: #D9EEE1 ;
+            color: black;
+        }
+        .main .track .login2 a p:hover{
+            background-color: rgb(41, 168, 98);
+            color: white;
+        }
+        .card{
+            background-color: #1E1E2F;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 600px;
+            width: 100%;
+            width: 100%;
+        }
+        .card header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card header nav a{
+            text-decoration: none;
+            color: #FFF4A3;
+            padding: 0px 20px;
+        }
+        .card header nav a:hover{
+            text-decoration: underline;
+        }
+        .card h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .card .container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .card .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .card ul li{
+            list-style: none;
+        }
+        .card ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .card ul li a:hover{
+            color: #FFF4A3;
+        }
+        .card h3 {
+            margin-left: 50px;
+            padding-bottom: 10px;
+        }
+        .card footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+        .card footer .logo a{
+            padding: 0px 10px;
+        }
+        .card footer .logo a:hover{
+            color: #FFF4A3;
+        }
+        .card footer nav a{
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+        }
+        .card footer nav a:hover{
+            color: #FFF4A3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav fixed-top bg-light">
+        <a href="index.html"><img src="W3Schools_logo.svg.png" alt=""></a>
+        <div class="bar">
+            <a href="#">Tutorial</a>
+            <a href="#">Excercise</a>
+            <a href="#">Certificates</a>
+            <a href="#">Service</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="bar2">
+            <a href="">Spaces</a>
+            <a href="">For Teacher</a>
+            <a href="">Get Certified</a>
+        </div>
+        <div class="login1">
+            <a href="" class="text-decoration-none">Sing Up</a>
+        </div>
+        <div class="login2">
+            <a href="" class="text-decoration-none">Log In</a>
+        </div>
+    </div>
+    <div class="nav2">
+        <div class="bar">
+            <a href="html-home.html">HTML</a>
+            <a href="#">CSS</a>
+            <a href="JS Home - Copy.html">JAVASCRIPT</a>
+            <a href="sql-home.html">SQL</a>
+            <a href="pyhome.html">PHYTON</a>
+            <a href="#" style="background-color: rgb(41, 168, 98);">JAVA</a>
+            <a href="#">PHP</a>
+            <a href="#">HOW TO</a>
+            <a href="#">W3.CSS</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">C#</a>
+            <a href="#">BOOTSTRAP</a>
+            <a href="#">REACT</a>
+            <a href="#">MYSQL</a>
+            <a href="#">JQUERY</a>
+            <a href="#">EXCEL</a>
+            <a href="#">DJANGO</a>
+            <a href="#">NUMPY</a>
+            <a href="#">PANDAS</a>
+            <a href="#">NODEJS</a>
+            <a href="#">DSA</a>
+            <a href="#">TYPESCRIPT</a>
+            <a href="#">ANGULAR</a>
+            <a href="#">GIT</a>
+            <a href="#">POSTGRESQL</a>
+            <a href="#">MONGODB</a>
+            <a href="#">ASP</a>
+            <a href="#">AI</a>
+            <a href="#">R</a>
+            <a href="#">GO</a>
+            <a href="#">KOTLIN</a>
+            <a href="#">SASS</a>
+            <a href="#">VUE</a>
+            <a href="#">GEN AI</a>
+            <a href="#">SCIPY</a>
+            <a href="CS HOME.html">CYBERSECURITY</a>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h5 class="ms-3">Java Tutorial</h5>
+         <div class="box" >
+            <a href="Java_Home.html" class="text-decoration-none">
+                <div class="in text-dark">Java Home</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="Java_Intro.html" class="text-decoration-none">
+                <div class="in text-dark">Java Intro</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="Java_Get_Started.html" class="text-decoration-none">
+                <div class="in text-dark">Java Get Started</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="Java_Syntax.html" class="text-decoration-none">
+                <div class="in text-dark">Java Syntax</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Output</div>
+            </a>
+         </div>
+         <div class="box" style="background-color: rgb(41, 168, 98);">
+            <a href="" class="text-decoration-none"> 
+                <div class="in text-white">Java Comments</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Variables</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Data Types</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Type Casting</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Operators</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Strings</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Math</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Booleans</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java If...Else</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Switch</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java While Loop</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java For Loop</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Break/Continue</div>
+            </a>
+         </div>
+         <div class="box">
+            <a href="" class="text-decoration-none">
+                <div class="in text-dark">Java Arrays</div>
+            </a>
+         </div>
+        <h5 class="ms-3">Java Method</h5>
+    </div>
+    <div class="sidebar-right">
+        
+    </div>
+    <div class="main">
+     <div class="header">
+        <h1 class="ms-4 pt-5">Java Comments</h1>
+        <a href="#" class="text-decoration-none">
+            <p class="text-white text-center ms-4 d-inline-block"><i class="fa-solid fa-chevron-left"></i> Previous</p>
+        </a>
+        <a href="#" class="text-decoration-none">
+            <p class="text-white text-center d-inline-block me-4" style="float: right;">Next <i class="fa-solid fa-chevron-right"></i></p>
+        </a>
+     </div>
+        <hr width="100%" color="black">
+     <div class="java-comments">
+        <h2 class="ms-4">Java Comments</h2>
+        <p class="ms-4">Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+     </div>
+     <hr width="100%" color="black">
+     <div class="singel-line">
+        <h2 class="ms-4">Single-line Comments</h2>
+        <p class="ms-4 d-inline-block">Single-line comments start with two forward slashes (<p class="d-inline-block" style="color: red;">//</p>).</p>
+        <p class="ms-4 d-inline-block">Any text between <p class="d-inline-block ms-1" style="color: red;"> //</p> and the end of the line is ignored by Java (will not be executed).</p>
+        <p class="ms-4">This example uses a single-line comment before a line of code</p>
+        <div class="kartu1 ms-4 d-inline-block">
+            <h4 class="ms-4 mt-4 d-inline-block" style="width: 100px;">Example</h4>
+            <a href=""><p class="d-inline-block mt-4 fw-bold me-4 text-white p-2 text-center" style="float: right; background-color: #282A35; width: 250px;">Get your own Java Server</p></a>
+            <div class="box g bg-white ms-4 mt-3" style="height: 100px;"><img src="Gambar Java Comment/example1text.png" alt=""></div>
+            <a href="" class="text-decoration-none">
+                <p class="ms-4 mt-2 text-center p-2 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px;">Try It Your Self <i class="fa-solid fa-angles-right"></i></p>
+            </a>
+        </div>
+        <p class="ms-4 mt-2">This example uses a single-line comment at the end of a line of code:</p>
+        <div class="kartu2 ms-4" style="height: 190px;">
+            <h4 class="ms-4 mt-1 d-inline-block" style="width: 100px;">Example</h4>
+            <div class="card-in" style="height: 50px;">
+                <p class=" ms-3 text-dark" style="padding-top: 13px;"><img src="Gambar Java Comment/example2text.png" alt=""></p>
+            </div>
+            <a href="" class="text-decoration-none">
+                <p class="p-2 mt-3 ms-4 text-white text-center" style="width: 150px;">Try it Your Self <i class="fa-solid fa-angles-right"></i></p>
+            </a>
+        </div>
+     </div>
+        <hr width="100%" color="black">
+     <div class="multi-line">
+        <h2 class="ms-4">Java Multi-line Comments</h2>
+        <p class="ms-4 d-inline-block">Multi-line comments start with <p class="ms-1 d-inline-block" style="color: red;">/*</p> and ends with <p class="ms-1 d-inline-block" style="color: red;">*/</p>.</p>
+        <p class="d-inline-block ms-4">Any text between <p class="ms-1 d-inline-block" style="color: red;">/*</p> and <p class="ms-1 d-inline-block" style="color: red;">*/</p> will be ignored by Java.</p>
+        <p class="ms-4">This example uses a multi-line comment (a comment block) to explain the code:</p>
+        <div class="kartu2 ms-4" style="height: 250px;">
+            <h4 class="ms-4 mt-1 d-inline-block" style="width: 100px;">Example</h4>
+            <div class="card-in" style="height: 100px;">
+                <p class=" ms-3 text-dark" style="padding-top: 13px;"><img src="Gambar Java Comment/example3text.png" alt=""></p>
+            </div>
+            <a href="" class="text-decoration-none">
+                <p class="p-2 mt-3 ms-4 text-white text-center" style="width: 150px;">Try it Your Self <i class="fa-solid fa-angles-right"></i></p>
+            </a>
+        </div>
+        <div class="box-yellow mt-3 ms-4">
+            <p class="ms-4 pt-3">Single or multi-line comments?</p>
+            <p class="ms-4 d-inline-block">It's up to you which one you use. Normally, we use <p class="ms-1 d-inline-block" style="color: red;">//</p> for short comments, and <p class="ms-1 d-inline-block" style="color: red;">/*</p><p class="ms-1 d-inline-block" style="color: red;">*/</p> for longer.</p>
+        </div>
+     </div>
+        <hr width="100%" color="bklack">
+     <form class="ms-4">
+            <h2 class="text-white text-center pt-4">Excercises</h2>
+            <p class="text-white text-center">What is the meaning of comments in Java?</p>
+            <div class="pilih">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">To output text</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">To create text variables</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">To explain and document code</p>
+            </div>
+            <div class="pilih mt-2">
+             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">To print text and numbers with a simple line of code</p>
+            </div>
+            <a href="" class="text-decoration-none">
+                <p class="text-center mt-5 p-2 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 200px; margin-left: 35%;">Submit Answer <i class="fa-solid fa-angles-right"></i></p>
+            </a>
+     </form>
+        <hr width="100%" style="color: rgb(0, 0, 0);">
+     <div class="video-java">
+        <h1 class="text-center">Video: Java Comments</h1>
+        <a href="https://youtu.be/t54pgbVy6t0?si=Rxw-Nn43WrLAlxRd">
+            <img src="Gambar Java Comment/Screenshot 2025-04-11 182130.png" style="margin-left: 75px;">
+        </a>
+     </div>
+        <hr width="100%" color="black">
+     <div class="track-progres">
+        <a href="#" class="text-decoration-none">
+            <p class="text-white text-center ms-4 d-inline-block"><i class="fa-solid fa-chevron-left"></i> Previous</p>
+        </a>
+        <a href="#" class="text-decoration-none">
+            <p class="text-white text-center d-inline-block me-4" style="float: right;">Next <i class="fa-solid fa-chevron-right"></i></p>
+        </a>
+        <div class="track ms-4">
+            <h3 class="text-white fw-bold d-inline-block" style="margin-left: 140px; margin-top: 50px;">Track your progress - it's free!</h3>  
+            <div class="login1 d-inline-block">
+               <a href="" class="text-decoration-none">
+                   <p class="d-inline-block text-center text-white p-2 fw-bold" style=" margin-left: 20px; border-radius: 50px;">Sing In</p>
+               </a>
+            </div>     
+            <div class="login2 d-inline-block">
+               <a href="" class="text-decoration-none">
+                   <p class="d-inline-block text-center p-2 fw-bold" style=" margin-left: 0px; border-radius: 50px;">Log In</p>
+               </a>
+            </div>   
+        </div>
+     </div>
+    </div>
+    <div class="card">
+        <header>
+            <nav>
+                <a href="#">PLUS</a> 
+                <a href="#">SPACES</a> 
+                <a href="#">GET CERTIFIED</a> 
+                <a href="#">FOR TEACHERS</a> 
+                <a href="#">FOR BUSINESS</a>
+                <a href="#">CONTACT US</a>
+            </nav>
+        </header>
+    
+        <div class="container">
+            <div class="column">
+                <h3>Top Tutorial</h3>
+                <ul>
+                    <li><a href="">Html Tutorial</a></li>
+                    <li><a href="">CSS Tutorial</a></li>
+                    <li><a href="">JavaScript Tutorial</a></li>
+                    <li><a href="">How To Tutorial</a></li>
+                    <li><a href="">SQL Tutorial</a></li>
+                    <li><a href="">Phyton Tutorial</a></li>
+                    <li><a href="">W.3CSS Tutorial</a></li>
+                    <li><a href="">Bootstrap Tutorial</a></li>
+                    <li><a href="">PHP Tutorial</a></li>
+                    <li><a href="">Java Tutorial</a></li>
+                    <li><a href="">C++ Tutorial</a></li>
+                    <li><a href="">jQuery Tutorial</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Top References</h3>
+                <ul>
+                    <li><a href="">Html Refrence</a></li>
+                    <li><a href="">CSS Refrence</a></li>
+                    <li><a href="">JavaScript Refrence</a></li>
+                    <li><a href="">How To Refrence</a></li>
+                    <li><a href="">SQL Refrence</a></li>
+                    <li><a href="">Phyton Refrence</a></li>
+                    <li><a href="">W.3CSS Refrence</a></li>
+                    <li><a href="">Bootstrap Refrence</a></li>
+                    <li><a href="">PHP Refrence</a></li>
+                    <li><a href="">Java Refrence</a></li>
+                    <li><a href="">C++ Refrence</a></li>
+                    <li><a href="">jQuery Refrence</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Top Examples</h3>
+                <ul>
+                    <li><a href="">Html Examples</a></li>
+                    <li><a href="">CSS Examples</a></li>
+                    <li><a href="">JavaScript Examples</a></li>
+                    <li><a href="">How To Examples</a></li>
+                    <li><a href="">SQL Examples</a></li>
+                    <li><a href="">Phyton Examples</a></li>
+                    <li><a href="">W.3CSS Examples</a></li>
+                    <li><a href="">Bootstrap Examples</a></li>
+                    <li><a href="">PHP Examples</a></li>
+                    <li><a href="">Java Examples</a></li>
+                    <li><a href="">C++ Examples</a></li>
+                    <li><a href="">jQuery Examples</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Get Certified</h3>
+                <ul>
+                    <li><a href="">Html Certificate</a></li>
+                    <li><a href="">CSS Certificate</a></li>
+                    <li><a href="">JavaScript Certificate</a></li>
+                    <li><a href="">How To Certificate</a></li>
+                    <li><a href="">SQL Certificate</a></li>
+                    <li><a href="">Phyton Certificate</a></li>
+                    <li><a href="">W.3CSS Certificate</a></li>
+                    <li><a href="">Bootstrap Certificate</a></li>
+                    <li><a href="">PHP Certificate</a></li>
+                    <li><a href="">Java Certificate</a></li>
+                    <li><a href="">C++ Certificate</a></li>
+                    <li><a href="">jQuery Certificate</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="logo d-inline-block">
+                <a href=""><i class="fa-brands fa-discord"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <nav class="d-inline-block">
+                <a href="">Forum</a>
+                <a href="">About</a>
+                <a href="">Accademy</a>
+            </nav>
+            <div class="text text-center mt-2">
+                <p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>
+                <p>Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.</p>
+            </div>
+        </footer>
+      </div>
+</body> 
+</html> 

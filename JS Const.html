@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Const</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .belowtopnavcontainer {
+          max-width:1750px;
+          margin:auto;
+        }
+        .contentcontainer {
+           background-color: #f5f6f7;
+        }
+        body.darkpagetheme .contentcontainer {
+           background-color: #29353e;
+        }
+        .sidebar{
+            position: fixed;
+            top: 90px;
+            overflow-y: auto;
+            background-color: #E7E9EB;
+            height: 545px;
+            width: 250px;
+        }
+        .sidebar h5{
+            margin-top: 25px;
+        }
+        .sidebar .box{
+            padding: 5px 0px;
+        }
+        .sidebar .box .in{
+            margin-left: 30px; 
+        }
+        .sidebar .box:hover{
+            background-color: #cccccc;
+        }
+        .nav{
+           position: fixed;
+           top: 0px;
+           height: 60px;
+           display: flex;
+           width: 100%;
+        }
+        .nav img{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            margin-left: 5px;
+            
+        }
+        .nav .bar{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 19px;
+        }
+        .nav .bar a{
+            padding: 21px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav .search{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        .nav .search input{ 
+            border-radius: 30px;
+            height: 40px;
+        }
+        .nav .search input:focus{
+            border: 0,5px solid rgb(68, 155, 68);
+            outline: 5px solid rgb(68, 155, 68);
+        }
+        .nav .bar2{
+           display: inline-block;
+           margin-left: 30px;
+           padding-top: 20px;
+        }
+        .nav .bar2 a{
+            padding: 10px 30px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .bar2 a:hover{
+            background-color: #f2f2f2;
+            border-radius: 30px;
+        }
+        .nav .login1{
+           display: inline-block;
+           margin-left: 10px;
+           padding-top: 21px;
+        }
+        .nav .login1 a{
+            background-color: rgb(41, 168, 98);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2{
+           display: inline-block;
+           padding-top: 21px;
+        }
+        .nav .login2 a{
+            background-color: rgb(131, 197, 131);
+            padding: 10px 10px;
+            border-radius: 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-bottom: 40px;
+        }
+        .nav .login2 a:hover{
+            color: white;
+            background-color: rgb(41, 168, 98);
+        }
+        .nav2{
+            position: fixed;
+            top: 0px;
+            background-color: #282A35;
+            width: 100%;
+            height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+            margin-top: 60px;
+        }
+        .nav2::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+        .nav2 .bar{
+            display: inline-block;
+            padding-top: 3px;
+        }
+        .nav2 .bar a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 15px;
+        }
+        .nav2 .bar a:hover{
+            background-color: black;
+        }
+        .sidebar-right{
+          background-color: grey;
+          float: right;
+          height: 8000px;
+          width: 200px;
+        }
+        .main{
+          width: 1100px;
+          height: 3000px;
+          margin-left: 250px;
+          margin-top: 70px;
+        }
+        .main .head{
+          height: 660px;
+          width: 100%;
+        }
+        .main .head a p{
+          background-color: rgb(41, 168, 98);
+          width: 100px;
+          border-radius: 5px;
+        }
+        .main .head .items{
+            background-color: rgb(217, 238, 225);
+          height: 150px;
+          width: 850px;
+        }
+        .main .head .items a p{
+          background-color: rgb(41, 168, 98);
+          width: 300px;
+          border-radius: 5px;
+        }
+        .main .example .box{
+          background-color: rgb(231, 233, 235);
+          height: 200px;
+          width: 800px;
+          border-radius: 5px;
+        }
+        .main .example .box .box-in{
+          background-color: white;
+          border-left: 4px solid #4CAF50;
+          height: 50px;
+          width: 750px;
+        }
+        .main .learn .yellow-box{
+          background-color: rgb(255, 255, 204);
+          width: 850px;
+          height: 90px;
+        }
+        .main form{
+            background-color: #2D3748;
+            height: 450px;
+            width: 850px;
+            border-radius: 10px;
+        }
+        .main form .pilih{
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 700px;
+            height: 50px;
+            margin-left: 70px;
+            border-radius: 5px;
+            padding-top: 13px;
+            padding-left: 20px;
+        }
+        .table {
+            margin: 20px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            display: table;
+            border: 1px solid #ccc;
+        }
+        .table .browserref th {
+            height: 44px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1px solid #d4d4d4;
+            background-color: #ffffff;
+            font-weight: normal;
+            color: #555555;
+            padding: 11px 0px 11px 0px;
+            vertical-align: middle;
+        }
+    </style>
+    <body>
+        <div class="nav fixed-top bg-light">
+            <a href="index.html"><img src="W3Schools_logo.svg.png" alt=""></a>
+            <div class="bar">
+                <a href="Tutorial.html">Tutorial</a>
+                <a href="Excercises.html">Excercise</a>
+                <a href="Certificates.html">Certificates</a>
+                <a href="Service.html">Service</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="bar2">
+                <a href="">Spaces</a>
+                <a href="">For Teacher</a>
+                <a href="">Get Certified</a>
+            </div>
+            <div class="login1">
+                <a href="" class="text-decoration-none">Sing Up</a>
+            </div>
+            <div class="login2">
+                <a href="" class="text-decoration-none">Log In</a>
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="bar">
+                <a href="html-home.html">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#" style="background-color: rgb(41, 168, 98);">JAVASCRIPT</a>
+                <a href="sql-home.html">SQL</a>
+                <a href="pyhome.html">PHYTON</a>
+                <a href="Java_Home.html">JAVA</a>
+                <a href="#">PHP</a>
+                <a href="#">HOW TO</a>
+                <a href="#">W3.CSS</a>
+                <a href="#">C</a>
+                <a href="#">C++</a>
+                <a href="#">C#</a>
+                <a href="#">BOOTSTRAP</a>
+                <a href="#">REACT</a>
+                <a href="#">MYSQL</a>
+                <a href="#">JQUERY</a>
+                <a href="#">EXCEL</a>
+                <a href="#">DJANGO</a>
+                <a href="#">NUMPY</a>
+                <a href="#">PANDAS</a>
+                <a href="#">NODEJS</a>
+                <a href="#">DSA</a>
+                <a href="#">TYPESCRIPT</a>
+                <a href="#">ANGULAR</a>
+                <a href="#">GIT</a>
+                <a href="#">POSTGRESQL</a>
+                <a href="#">MONGODB</a>
+                <a href="#">ASP</a>
+                <a href="#">AI</a>
+                <a href="#">R</a>
+                <a href="#">GO</a>
+                <a href="#">KOTLIN</a>
+                <a href="#">SASS</a>
+                <a href="#">VUE</a>
+                <a href="#">GEN AI</a>
+                <a href="#">SCIPY</a>
+                <a href="CS HOME.html">CYBERSECURITY</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="box">
+                <a href="JS Home - Copy.html" class="text-decoration-none">
+                    <div class="in text-dark">JS HOME</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Introduction.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Introduction</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Where To.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Where To</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Output.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Output</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Statements.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Statements</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Syntax.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Syntax</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Comments.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Comments</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Variables.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Variables</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="JS Let.html" class="text-decoration-none">
+                  <div class="in text-dark">JS Let</div>
+              </a>
+           </div>
+           <div class="box" style="background-color: rgb(41, 168, 98); ">
+              <a href="JS Const.html" class="text-decoration-none">
+                  <div class="in text-light">JS Const</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Operators</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Arithmetic</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Assignment</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Data Type</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Function</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object properties</div>
+              </a>
+           </div>
+           <div class="box">
+              <a href="" class="text-decoration-none">
+                  <div class="in text-dark">JS Object Methods</div>
+              </a>
+           </div>
+        </div>
+        <div class="sidebar-right"></div>
+        <div class="main">
+            <div class="head">
+                <h1 class="ms-4 pt-4">JavaScript Const  </h1>
+                <a href="JS Let.html" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block">Home</p>
+                </a>
+                <a href="#" class="text-decoration-none">
+                    <p class="text-center p-2 ms-4 text-white fw-bold d-inline-block float-end me-4">Next</p>
+                </a>
+                <div class="items ms-3" style="height: 190px;">
+                    <p class="ms-4 pt-4">The <code>const</code> keyword was introduced in <a href="" class="text-dark">ES6 (2015)</a></p>
+                    <p class="ms-4">Variables defined with <code>const</code> cannot be <strong>Redeclared</strong></p>
+                    <p class="ms-4">Variables defined with <code>const</code> cannot be <strong>Reassigned</strong></p>
+                    <p class="ms-4">Variables defined with <code>const</code> have <strong>Block Scope`</strong></p>
+                </div> <br>
+                <div class="example">
+                    <h2 class="ms-4">Cannot be Reassigned</h2>
+                    <p class="ms-4">A variable defined with the <code>const</code> keyword cannot be reassigned:</p>
+                    <div class="box ms-3" style="height: 220px;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 90px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div>
+            </div>
+                <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">Must be Assigned</h2>
+                    <p class="ms-4">JavaScript <code>const</code> variables must be assigned a value when they are declared:</p>
+                    <div class="box ms-3" style="height: 130px;">
+                        <h4 class="ms-4 pt-4">Correct</h4>  
+                        <div class="box-in ms-4" style="height: 40px;"></div>
+                    </div>
+                </div> <br>
+                <div class="example">
+                    <div class="box ms-3" style="height: 150px; background-color: #ffdddd;">
+                        <h4 class="ms-4 pt-4">Incorrect</h4>  
+                        <div class="box-in ms-4" style="height: 50px;"></div>
+                    </div>
+                </div> <br>
+                <div class="learn">
+                    <div class="yellow-box ms-1 pt-4" style="height: 270px;">
+                        <h2 class="ms-4">When to use JavaScript const?</h2>
+                        <p class="ms-4" style= "margin-top: px; margin-bottom: 16px;"><strong> declare a variable with <code>const</code> when you know that the value should not be changed.</strong></p>
+                        <p class="ms-4" style= "margin-top: px; margin-bottom: 16px;">Use <code>const</code> when you declare:</p>
+                        <ul class="ms-5">
+                            <li>A new Array</li>
+                            <li>A new Object</li>
+                            <li>A new Function</li>
+                            <li>A new RegExp</li>
+                        </ul>
+                      </div>
+                    </div>
+                <hr width="80%" color="black">
+                <h2 class="ms-4">Constant Objects and Arrays</h2>
+                <p class="ms-4">The keyword <code>const</code> is a little misleading.</p>
+                <p class="ms-4">It does not define a constant value. It defines a constant reference to a value.</p>
+                <p class="ms-4">Because of this you can NOT:</p>
+                <ul class="ms-5">
+                    <li>Reassign a constant value</li>
+                    <li>Reassign a constant array</li>
+                    <li>Reassign a constant object</li>
+                </ul>
+                <p style="margin-left: 80px;">But you CAN:</p>
+                <ul class="ms-5">
+                    <li>Change the elements of constant array</li>
+                    <li>Change the properties of constant object</li>
+                </ul>
+                <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">Constant Arrays</h2>
+                    <p class="ms-4">You can change the elements of a constant array:</p>
+                    <div class="box ms-3" style="height: 300px;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 160px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div>
+                <p class="ms-4 pt-3">But you can NOT reassign the array:</p>
+                <div class="example">
+                    <div class="box ms-3" style="height: 210px; background-color: #ffdddd;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 80px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div> 
+                <hr width="80%" color="black">
+                <div class="example">
+                    <h2 class="ms-4">Constant Objects</h2>
+                    <p class="ms-4">You can change the properties of a constant object:</p>
+                    <div class="box ms-3" style="height: 300px;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 160px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div><div class="example">
+                    <h2 class="ms-4">Constant Objects</h2>
+                    <p class="ms-4">You can change the properties of a constant object:</p>
+                    <div class="box ms-3" style="height: 300px;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 160px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div>
+                <p class="ms-4 pt-3">But you can NOT reassign the object:</p>
+                <div class="example">
+                    <div class="box ms-3" style="height: 210px; background-color: #ffdddd;">
+                        <h4 class="ms-4 pt-4">Example</h4>  
+                        <div class="box-in ms-4" style="height: 80px;"></div>
+                        <a href="" class="text-decoration-none">
+                            <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                          </a>
+                    </div>
+                </div> 
+                <hr width="80%" color="black">
+                <h2 class="ms-4">Difference Between var, let and const</h2>
+                <table class="table" style="width: 850px;">
+                    <tr></tr>
+                        <tr style="background-color: #ccc;">
+                            <td></td>
+                            <td>Scope</td>
+                            <td>Redeclare</td>
+                            <td>Reassign</td>
+                            <td>Hoisted</td>
+                            <td>Binds this</td>
+                        </tr>
+                        <tr>
+                            <td>var</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr style="background-color: #ccc;">
+                            <td>let</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>const</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                </table>
+                <h2 class="ms-4">What is Good?</h2>
+                <p class="ms-4 pt-2"><code>let</code> and <code>const</code> have <strong>block scope</strong>.</p>
+                <p class="ms-4"><code>let</code> and <code>const</code> can not be <strong>redeclared</strong>.</p>
+                <p class="ms-4"><code>let</code> and <code>const</code> must be <strong>declared</strong> before use.</p>
+                <p class="ms-4"><code>let</code> and <code>const</code> does <strong>not bind</strong> to <code>this</code>.</p>
+                <p class="ms-4"><code>let</code> and <code>const</code> are <strong>not hoisted</strong>.</p>
+                <h2 class="ms-4 pt-2">What is Not Good?</h2>
+                <p class="ms-4 pt-2">var does not have to be declared.</p>
+                <p class="ms-4">var is hoisted.</p>
+                <p class="ms-4">var binds to this.</p>
+                <hr width="80%" color="black">
+                <table class="table browserref" style="width: 850px;">
+                    <h2 class="ms-4">Browser Support</h2>
+                    <p class="ms-4">The <code>let</code> and <code>const</code> keywords are not supported in Internet Explorer 11 or earlier.</p>
+                    <p class="ms-4">The following table defines the first browser versions with full support:</p>
+                    <tr>
+                        <th><img src="compatible_chrome.png" alt=""></th>
+                        <th><img src="compatible_edge.png" alt=""></th>
+                        <th><img src="compatible_firefox.png" alt=""></th>
+                        <th><img src="compatible_safari.png" alt=""></th>
+                        <th><img src="compatible_opera.png" alt=""></th>
+                    </tr>
+                    <tr style="background-color: #ccc;">
+                        <td>Chrome 49</td>
+                        <td>Edge 12</td>
+                        <td>Firefox 36</td>
+                        <td>Safari 11</td>
+                        <td>Opera 36</td>
+                    </tr>
+                    <tr>
+                        <td>Mar, 2016</td>
+                        <td>Jul, 2015</td>
+                        <td>Jan, 2015</td>
+                        <td>Sep, 2017</td>
+                        <td>Mar, 2016</td>
+                    </tr>
+                </table>
+            </table>
+            <hr width="80%" color="black">
+            <a href=""><img style="width: 300px; margin-left: 280px; border: 1px solid #ccc;" src="650626241853242492.jpeg" alt=""></a>
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">Block Scope</h2>
+                <p class="ms-4">Declaring a variable with <code>const</code> is similar to <code>let</code> when it comes to <strong>Block Scope</strong>.</p>
+                <p class="ms-4">The x declared in the block, in this example, is not the same as the x declared outside the block:</p>
+                <div class="box ms-3" style="height: 300px;">
+                    <h4 class="ms-4 pt-4">Example</h4>  
+                    <div class="box-in ms-4" style="height: 160px;"></div>
+                    <a href="" class="text-decoration-none">
+                        <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                      </a>
+                </div>
+            </div> <br>
+            <p class="ms-4">You can learn more about block scope in the chapter <a href="" class="text-dark">JavaScript Scope</a>.</p>
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">Redeclaring</h2>
+                <p class="ms-4">Redeclaring a JavaScript var variable is allowed anywhere in a program:</p>
+                <div class="box ms-3" style="height: 200px;">
+                    <h4 class="ms-4 pt-4">Example</h4>  
+                    <div class="box-in ms-4" style="height: 110px;"></div>
+                </div>
+            </div>
+            <p class="ms-4 pt-3">Redeclaring an existing <code>var</code> or <code>let</code> variable to <code>const</code>, in the same scope, is not allowed:</p>
+            <div class="example">
+                <div class="box ms-3" style="height: 320px;">
+                    <h4 class="ms-4 pt-4">Example</h4>  
+                    <div class="box-in ms-4" style="height: 230px;"></div>
+                </div>
+            </div>
+            <p class="ms-4 pt-3">Reassigning an existing <code>const</code> variable, in the same scope, is not allowed:</p>
+            <div class="example">
+                <div class="box ms-3" style="height: 320px;">
+                    <h4 class="ms-4 pt-4">Example</h4>  
+                    <div class="box-in ms-4" style="height: 230px;"></div>
+                </div>
+            </div>
+            <p class="ms-4 pt-3">Redeclaring a variable with <code>const</code>, in another scope, or in another block, is allowed:</p>
+            <div class="example">
+                <div class="box ms-3" style="height: 280px;">
+                    <h4 class="ms-4 pt-4">Example</h4>  
+                    <div class="box-in ms-4" style="height: 190px;"></div>
+                </div>
+            </div>
+            <hr width="80%" color="black">
+            <div class="example">
+                <h2 class="ms-4">Hoisting</h2>
+                <p class="ms-4">Variables defined with <code>var</code> are <strong>hoisted</strong> to the top and can be initialized at any time.</p>
+                <p class="ms-4">Meaning: You can use the variable before it is declared:</p>
+                <div class="box ms-3" style="height: 230px;">
+                    <h4 class="ms-4 pt-4">Example</h4>
+                    <p class="ms-4">This is OK:</p>  
+                    <div class="box-in ms-4" style="height: 50px;"></div>
+                    <a href="" class="text-decoration-none">
+                        <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                      </a>
+                </div>
+            </div>
+            <p class="ms-4 pt-3">If you want to learn more about hoisting, study the chapter <a href="" class="text-dark">JavaScript Hoisting</a>.</p>
+            <p class="ms-4">Variables defined with <code>const</code> are also hoisted to the top, but not initialized.</p>
+            <p class="ms-4">Meaning: Using a <code>const</code> variable before it is declared will result in a <code>ReferenceError</code>:</p>
+            <div class="example">
+                <div class="box ms-3" style="height: 190px; background-color: #ffdddd;">
+                    <h4 class="ms-4 pt-4">Example</h4>
+                    <div class="box-in ms-4" style="height: 50px;"></div>
+                    <a href="" class="text-decoration-none">
+                        <p class="text-center p-2 ms-4 mt-3 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 150px; border-radius: 5px;">Try it YourSelf</p>
+                      </a>
+                </div>
+            </div>
+            <hr width="80%" color="black">
+                    <div class="java-exercises">
+                        <form class="ms-4" style="height: 380px; width: 840px;">
+                            <h2 class="text-white text-center pt-4">Excercises</h2>
+                            <p class="text-white text-center">True or False.</p>
+                            <p class="text-white text-center">Variables created with the const keyword can never change their value.</p>
+                            <div class="pilih">
+                             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">True</p>
+                            </div>
+                            <div class="pilih mt-2">
+                             <input type="radio" name="ocde" class="d-inline-block"><p class="text-white d-inline-block ms-3">False</p>
+                            </div>
+                            <a href="" class="text-decoration-none">
+                                <p class="text-center mt-4 p-2 text-white fw-bold" style="background-color: rgb(41, 168, 98); width: 200px; margin-left: 35%;">Submit Answer <i class="fa-solid fa-angles-right"></i></p>
+                            </a>
+                         </form>
+                         <hr width="80%" color="black">
+                      </div>
+                      <a href="JS Variables.html" class="text-decoration-none">
+                        <p class="text-white fw-bold text-center mt-3 ms-4 p-2 d-inline-block" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px;">Back</p>
+                    </a>
+                    <a href="JS Const.html" class="text-decoration-none">
+                        <p class="fw-bold text-white text-center mt-3 ms-4 p-2 d-inline-block me-4" style="background-color: rgb(41, 168, 98); width: 100px; border-radius: 5px; float: right;">Next</p>
+                    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

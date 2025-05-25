@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS HOME</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/53cbf3eb97.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .main {
+        margin-left: 250px;
+        margin-top: 50px;
+        background-color: qua;
+        width: 1070px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+      }
+      .sidebar-right {
+        background-color: rgb(221, 220, 220);
+        margin-top: 50px;
+        float: right;
+        width: 190px;
+        height: 2000px;
+        border-left: black;
+      }
+       p, th, td, li {
+            font-family: Verdana, sans-serif;
+            }
+            h1, h2, h3, h4, h5, h6 {
+            font-family: "Segoe UI", sans-serif;
+            }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="padding: 0">
+      <div class="container-fluid">
+        <!--Logo-->
+        <a class="navbar-brand" href="index.html">
+          <img src="https://www.w3schools.com/images/w3schools_logo_436_2.png" alt="W3Schools" height="50" />
+        </a>
+
+        <!--toggle-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Menu-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto" style="align-items: center">
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tutorials </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Exercises </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Certificates </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <div class="input-group">
+                <input type="text" class="form-control rounded-pill" style="font-size: 12px; font-style: italic" placeholder="Search..." aria-label="Search" />
+                <button class="btn rounded-pill py-1 px-2" style="right: 32px" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </li>
+            <li class="nav-item mode-btn">
+              <button class="btn rounded-pill py-1 px-2"><i class="bi bi-circle-half"></i></button>
+            </li>
+          </ul>
+          <ul class="navbar-nav" style="color: black">
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-stars" style="color: #9b68f6"></i> Plus</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><span style="font-weight: 800; color: #9b68f6">&lt;/&gt;</span> Spaces</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-mortarboard-fill" style="color: #9b68f6"></i> For Teachers</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-cart3" style="color: #9b68f6"></i> Get Certified</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-btn">
+            <li class="nav-item">
+              <button class="btn btn-custom btn-signup" style="color: white">Sign Up</button>
+              <button class="btn btn-custom btn-login">Log In</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Horizontal nav menu -->
+    <div class="nav2 position-fixed" style="top: 50px; z-index: 1030">
+      <div class="bar">
+        <a href="html-home.html">HTML</a>
+        <a href="#">CSS</a>
+        <a href="JS Home - Copy.html">JAVASCRIPT</a>
+        <a href="sql-home.html">SQL</a>
+        <a href="pyhome.html">PHYTON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="#" style="background-color: rgb(41, 168, 98)">CYBERSECURITY</a>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar vh-150" style="padding-bottom: 110px; top: 90px">
+      <h5 class="ms-3">Cyber Security</h5>
+      <div class="box" style="background-color: rgb(41, 168, 98)">
+        <a href="CS HOME.html" class="text-decoration-none">
+          <div class="in text-light" data-bs-target="#cs-home">CS Home</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="Cyber Crime.html" class="text-decoration-none">
+          <div class="in text-dark" data-bs-target="#cs-cyber">CS Cyber Crime</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Money Making Threats.html" class="text-decoration-none">
+          <div class="in text-dark">CS Money Making Threats</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Dark Web.html" class="text-decoration-none">
+          <div class="in text-dark">CS Dark Web</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Networking</h5>
+      <div class="box">
+        <a href="Cyber Security Networking Basics.html" class="text-decoration-none">
+          <div class="in text-dark">CS Networking Basics</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Layer.htmls" class="text-decoration-none">
+          <div class="in text-dark">CS Network Layer</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Transport.html" class="text-decoration-none">
+          <div class="in text-dark">CS Network Transport</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Firewall.html" class="text-decoration-none">
+          <div class="in text-dark">CS Firewall</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Web Aplication.html" class="text-decoration-none">
+          <div class="in text-dark">CS Web Applications</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Attacks</h5>
+      <div class="box">
+        <a href="CS_Mapping_Port_Scanning.html" class="text-decoration-none">
+          <div class="in text-dark" style="font-size: 14px">CS Mapping & Port Scanning</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Network Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Web Application Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS WIFI Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Passwords</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Penetration Testing & Social Engineering</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Defence</h5>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Security Operations</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Incident Response</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">Quiz and Certificate</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Quiz</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Syllabus</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Study Plan</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Certificate</div>
+        </a>
+      </div>
+    </div>
+    <!-- Advertise -->
+    <div class="sidebar-right"></div>
+
+    <!-- Main-Content -->
+
+    <div class="main" id="cs-cyber">
+      <div class="fw-bold text-dark">
+        <h1 class="ms-4" style="padding-top: 100px">Cyber Security</h1>
+        <div class="d-flex justify-content-between">
+          <a href="CS_Mapping_Port_Scanning.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center"><i class="fa-solid fa-chevron-left"></i> Back</p>
+          </a>
+          <a href="Cyber Crime.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center">Next <i class="fa-solid fa-chevron-right"></i></p>
+          </a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between m-5" style="background-color: #f3ecea">
+        <div class="row" style="align-items: center">
+          <div class="col-9">
+            <h3 class="pt-4 ms-4">Learn Cyber Security</h3>
+            <p class="ms-4" style="font-size: 20px">Welcome to this introductory course in Cyber security.</p>
+            <p class="ms-4" style="font-size: 20px">This course serves as an excellent primer to the many different domains of Cyber security.</p>
+          </div>
+          <!-- <div class="col-3">
+            <h1 style="color: #ffc0c7; font-size: 120px">[+:</h1>
+          </div> -->
+          <div class="simbol col-3">
+            <h1 href="#" style="color: #ffc0c7; font-size: 80px" class="text-decoration-none">[+:</h1>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="cont">
+        <h3 class="pt-4 ms-4">Learning by Reading</h3>
+        <p class="text-decoration-none mx-4">We have created 16 tutorial pages for you to learn the fundamentals of Cyber Security:</p>
+      </div>
+
+      <h3 class="text-center">Basic Cyber Security</h3>
+      <div class="btn-basic-cyber-security d-flex flex-column align-items-center justify-content-center position-relative">
+        <div class="vertical-line position-absolute" style="background-color: #d9eee1; height: 100%; width: 2px; z-index: 0"></div>
+
+        <div class="btn-group d-flex flex-column align-items-center justify-content-center">
+          <a href="Cyber Crime.html" class="text-decoration-none">
+            <div class="btn mb-3" data-bs-target="#cs-cyber" style="background-color: #d9eee1; width: 250px">Cyber Crime</div>
+          </a>
+
+          <a href="CS Money Making Threats.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Money Making Threats</div>
+          </a>
+
+          <a href="CS Dark Web.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Dark Web</div>
+          </a>
+
+          <a href="Cyber Security Networking Basics.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Network Basics</div>
+          </a>
+
+          <a href="CS Network Layer.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Network Layer</div>
+          </a>
+
+          <a href="CS Network Transport.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Network Transport</div>
+          </a>
+
+          <a href="CS Firewall.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Firewalls</div>
+          </a>
+
+          <a href="CS Web Aplication.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Web Applications</div>
+          </a>
+
+          <a href="CS_Mapping_Port_Scanning.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Mapping & Port Scanning</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Network Attacks</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Web Application Attacks</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">WIFI Attacks</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Passwords</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Penetration Testing and Social Engineering</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Security Operations</div>
+          </a>
+
+          <a href="CS HOME.html">
+            <div class="btn my-3" style="background-color: #d9eee1; width: 250px">Incident Response</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>

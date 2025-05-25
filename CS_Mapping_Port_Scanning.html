@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS Network Mapping & Port Scanning</title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/53cbf3eb97.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css" />
+    <link href="CS Mapping & Port Scanning.css" rel="stylesheet"/>
+    <style>
+      .main {
+  margin-left: 250px;
+  margin-top: 50px;
+  background-color: qua;
+  width: 1070px;
+  height: 8000px;
+  background-color: rgb(255, 255, 255);
+}
+.sidebar-right {
+  background-color: rgb(221, 220, 220);
+  margin-top: 50px;
+  float: right;
+  width: 190px;
+  height: 8200px;
+  border-left: black;
+}
+ p, th, td, li {
+            font-family: Verdana, sans-serif;
+            }
+            h1, h2, h3, h4, h5, h6 {
+            font-family: "Segoe UI", sans-serif;
+            }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="padding: 0">
+      <div class="container-fluid">
+        <!--Logo-->
+        <a class="navbar-brand" href="index.html">
+          <img src="https://www.w3schools.com/images/w3schools_logo_436_2.png" alt="W3Schools" height="50" />
+        </a>
+
+        <!--toggle-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Menu-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto" style="align-items: center">
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tutorials </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Exercises </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Certificates </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-nav-menu py-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <div class="input-group">
+                <input type="text" class="form-control rounded-pill" style="font-size: 12px; font-style: italic" placeholder="Search..." aria-label="Search" />
+                <button class="btn rounded-pill py-1 px-2" style="right: 32px" type="button"><i class="bi bi-search"></i></button>
+              </div>
+            </li>
+            <li class="nav-item mode-btn">
+              <button class="btn rounded-pill py-1 px-2"><i class="bi bi-circle-half"></i></button>
+            </li>
+          </ul>
+          <ul class="navbar-nav" style="color: black">
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-stars" style="color: #9b68f6"></i> Plus</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><span style="font-weight: 800; color: #9b68f6">&lt;/&gt;</span> Spaces</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-mortarboard-fill" style="color: #9b68f6"></i> For Teachers</a>
+            </li>
+            <li class="nav-item nav-right-menu">
+              <a class="nav-link" href="#"><i class="bi bi-cart3" style="color: #9b68f6"></i> Get Certified</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-btn">
+            <li class="nav-item">
+              <button class="btn btn-custom btn-signup" style="color: white">Sign Up</button>
+              <button class="btn btn-custom btn-login">Log In</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Horizontal nav menu -->
+    <div class="nav2 position-fixed" style="top: 50px; z-index: 1030">
+      <div class="bar">
+        <a href="html-home.html">HTML</a>
+        <a href="#">CSS</a>
+        <a href="JS Home - Copy.html">JAVASCRIPT</a>
+        <a href="sql-home.html">SQL</a>
+        <a href="pyhome.html">PHYTON</a>
+        <a href="Java_Home.html">JAVA</a>
+        <a href="#">PHP</a>
+        <a href="#">HOW TO</a>
+        <a href="#">W3.CSS</a>
+        <a href="#">C</a>
+        <a href="#">C++</a>
+        <a href="#">C#</a>
+        <a href="#">BOOTSTRAP</a>
+        <a href="#">REACT</a>
+        <a href="#">MYSQL</a>
+        <a href="#">JQUERY</a>
+        <a href="#">EXCEL</a>
+        <a href="#">DJANGO</a>
+        <a href="#">NUMPY</a>
+        <a href="#">PANDAS</a>
+        <a href="#">NODEJS</a>
+        <a href="#">DSA</a>
+        <a href="#">TYPESCRIPT</a>
+        <a href="#">ANGULAR</a>
+        <a href="#">GIT</a>
+        <a href="#">POSTGRESQL</a>
+        <a href="#">MONGODB</a>
+        <a href="#">ASP</a>
+        <a href="#">AI</a>
+        <a href="#">R</a>
+        <a href="#">GO</a>
+        <a href="#">KOTLIN</a>
+        <a href="#">SASS</a>
+        <a href="#">VUE</a>
+        <a href="#">GEN AI</a>
+        <a href="#">SCIPY</a>
+        <a href="#" style="background-color: rgb(41, 168, 98)">CYBERSECURITY</a>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar vh-150" style="padding-bottom: 110px; top: 90px">
+      <h5 class="ms-3">Cyber Security</h5>
+      <div class="box">
+        <a href="CS HOME.html" class="text-decoration-none">
+          <div class="in text-dark" data-bs-target="#cs-home">CS Home</div>
+         
+        </a>
+      </div>
+      <div class="box">
+        <a href="Cyber Crime.html" class="text-decoration-none">
+          <div class="in text-dark" data-bs-target="#cs-cyber">CS Cyber Crime</div>
+         
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Money Making Threats.html" class="text-decoration-none">
+          <div class="in text-dark">CS Money Making Threats</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Dark Web.html" class="text-decoration-none">
+          <div class="in text-dark">CS Dark Web</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Networking</h5>
+      <div class="box">
+        <a href="Cyber Security Networking Basics.html" class="text-decoration-none">
+          <div class="in text-dark">CS Networking Basics</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Layer.html" class="text-decoration-none">
+          <div class="in text-dark">CS Network Layer</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Network Transport.html" class="text-decoration-none">
+          <div class="in text-dark">CS Network Transport</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Firewall.html" class="text-decoration-none">
+          <div class="in text-dark">CS Firewall</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="CS Web Aplication.html" class="text-decoration-none">
+          <div class="in text-dark">CS Web Applications</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Attacks</h5>
+      <div class="box" style="background-color: rgb(41, 168, 98)">
+        <a href="CS Mapping & Port Scanning.html" class="text-decoration-none">
+          <div class="in text-light" style="font-size: 14px">CS Mapping & Port Scanning</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Network Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Web Application Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS WIFI Attacks</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Passwords</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Penetration Testing & Social Engineering</div>
+        </a>
+      </div>
+      <h5 class="ms-3">Cyber Defence</h5>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Security Operations</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Incident Response</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">Quiz and Certificate</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Quiz</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Syllabus</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Study Plan</div>
+        </a>
+      </div>
+      <div class="box">
+        <a href="" class="text-decoration-none">
+          <div class="in text-dark">CS Certificate</div>
+        </a>
+      </div>
+    </div>
+    <!-- Advertise -->
+    <div class="sidebar-right"></div>
+
+    <!-- Main-Content -->
+
+    <div class="main" id="cs-cyber">
+      <div class="text-dark">
+        <h1 class="ms-4" style="padding-top: 100px">Cyber Security Network Mapping & Port Scanning</h1>
+        <div class="d-flex justify-content-between">
+          <a href="CS Web Aplication.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center"><i class="fa-solid fa-chevron-left"></i> Back</p>
+          </a>
+          <a href="CS HOME.html" class="text-decoration-none mx-5">
+            <p class="text-white text-center">Next <i class="fa-solid fa-chevron-right"></i></p>
+          </a>
+        </div>
+      </div>  
+      <hr />
+<p class="ms-4">If we are to defend, we first need to know what to defend. Asset Management often relies on Network Mapping to identify which systems are live on a network.</p>
+<p class="ms-4">Asset management and knowing what you expose on the network, including which services are hosted is very important for anyone looking to defend their network.</p>
+<hr>
+<h2 class="ms-4">Nmap - The Network Mapper</h2>
+<p class="ms-4">Nmap has for a long time been considered as the standard port scanner for both network engineers and security professionals. We can use it to discover assets to attack or defend.</p>
+<hr>
+<h2 class="ms-4">Network Mapping</h2>
+<p class="ms-4">One way to identify hosts which are active on the network is to send a ping, i.e. ICMP Echo Request, to all IP Addresses in the network. This is often referred to as a Ping Sweep.</p>
+<img src="img_pingsweep.svg" class="ms-3" style="height: 790px;"> 
+<p class="ms-4">This approach is not very good in discovering assets. It is likely that systems on the network will ignore incoming pings, perhaps due to a Firewall blocking them or because of a Host-Based Firewall. A host-based firewall is simply a firewall which is implemented on the system instead of on the network. </p>
+<p class="ms-4">A better approach involves sending a different kinds of packets to a system to try ask for any kind of answer to determine if system is alive or not. For example Nmap will send the following packets to the system to try cause a response:</p>
+<p>
+  <ul>
+    <li style="margin-left: 40px;">ICMP Echo Request</li>
+    <li style="margin-left: 40px;">TCP SYN packet to port 443</li>
+    <li style="margin-left: 40px;">TCP ACK packet to port 80</li>
+    <li style="margin-left: 40px;">ICMP Timestamp request</li>
+  </ul>
+</p>
+<p class="ms-4">Based on the TCP specifications, that is the rules of communications, a system should always engage in a three-way handshake before starting to communicate. Nmap seems to be intentionally breaking the rules with the packets above. Can you spot which packet is not behaving as systems would expect? </p>
+<p class="ms-4">Sending a TCP ACK packet to port 80 is not conforming to the rules of the TCP standard. Nmap does this specifically to try cause the target system to make a reply. In order to send packets which are not following the rules, Nmap must run with the highest level of privileges, e.g. root or local administrator. Most port scanners will be more accurate because of this.</p>
+<p class="ms-4">Disabling the Network Mapping can be done with Nmap with the -Pn flag. Nmap will now consider all IP/systems to be up and go directly to port scanning.</p>
+<p class="ms-4">Try this at home now if you would like to. Careful, if you are at a corporate environment, always get permission before you start running scanners as you do not want to violate any rules of your workspace. To try Nmap now, follow these simple steps:</p>
+<p>
+  <ul>
+    <li style="margin-left: 40px;">Go download Nmap at https://nmap.org. Make sure you download the version that matches your operating system</li>
+    <li style="margin-left: 40px;">Install Nmap and launch the tool from a command line terminal</li>
+    <li style="margin-left: 40px;">Find your local IP address and subnet</li>
+    <li style="margin-left: 40px;">Run Nmap to scan it to see what kinds of systems it can discover: nmap -vv IP/netmask</li>
+  </ul>
+</p>
+<p class="ms-4">We are adding two -v flag to tell Nmap we want verbose output, that makes the scan more fun to watch while it completes. </p>
+<img src="img_nmap-scan.png" class="ms-3" style="height: 440px;">
+<hr>
+<h2 class="ms-4">ARP Scan</h2>
+<p class="ms-4">The ARP protocol is contained within a LAN, but if the hosts you need to discover is on the LAN we could use this protocol to try reveal systems on the network. By simply iterating over all available IP addresses on the LAN network with the ARP protocol, we are trying to force systems to reply.</p>
+<p class="ms-4">The scan looks like this:</p>
+<div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Eve: Please Provide Mac Address of system 192.168.0.1</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Eve: Please Provide Mac Address of system 192.168.0.2</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Eve: Please Provide Mac Address of system 192.168.0.3<cookie value></h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Eve: Please Provide Mac Address of system 192.168.0.4</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Eve: Please Provide Mac Address of system 192.168.0.5-254</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Default Gateway: 192.168.0.1 is me and my MAC Address is AA:BB:CC:12:34:56</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Bob: 192.168.0.3 is me and my MAC Address is: BB:CC:DD:12:34:56</h6>
+    <h6 style="font-family: monospace" class="ms-3 mt-2">Alice: 192.168.0.4 is me and my MAC Address is: CC:DD:EE:12:34:56</h6>
+  </div>
+ </div>
+ <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-3" style="font-size: 15px">Note: ARP Scanning is a simple and effective way to find hosts on the LAN, but not outside of the LAN.</p>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <h2 class="ms-4">Port Scanning</h2>
+    <p class="ms-4">Port Scanning is done to try determine which services we can connect to. Each listening service provides attack surface which could potentially be abused by attackers. As such it is important to learn which ports are open.</p>
+    <p class="ms-4">Attackers are interested in knowing which applications are listening on the network. These applications represent opportunities for attackers. There might be vulnerabilities enabling them to attack successfully the organization.</p>
+    <p class="ms-4">Port Scanning works by sending packets to an application and looking for any replies. This is exceptionally easy for TCP, as if a TCP service is available it will always reply with a SYN/ACK packet. For UDP however it is more difficult. In order to detect if the service is available or not, in most cases the attacker must send specific input which forces the application to reply. Most applications hosted in UDP will not reply unless the Clients sends exactly the input required to engage in communications.</p>
+<hr>
+<h2 class="ms-4">TCP Port Scanning</h2>
+<p class="ms-4">TCP is an easy protocol to scan because the TCP standard dictates that systems should reply with a SYN/ACK when receiving a SYN. We can send a SYN packet to all 65536 ports and record all SYN/ACK's coming back and conclude the ports which are opened based on the reply of a SYN/ACK. When no reply is received, we can assume the port is closed or filtered by for example a Firewall.</p>
+<img src="img_tcpscan.svg" class="ms-2" style="height: 360px;">
+<p class="ms-4">With the SYN/ACK on port 445 we have identified the port is open.</p>
+<hr>
+<h2 class="ms-4">UDP Port Scanning</h2>
+<p class="ms-4">With UDP it is harder to determine if a port is up or not. For UDP ports the scanner can not rely on a SYN/ACK. In fact, the scanner must almost always rely on making the service listening cause some sort of reply.</p>
+<p class="ms-4">With so many ports potentially open and different services only replying to the correct kind of data, it becomes time consuming and hard to scan all ports in a reasonable time.</p>
+<p class="ms-4">Consider the following conversation where Eve tries to figure out if a UPD port is open:</p>
+<img src="img_udpscan.svg" class="ms-3" style="height: 400px;">
+<p class="ms-4">Eve need to talk the correct protocol, and make sure the packets reach their destination, e.g. no packet loss. Otherwise Eve might not discover the port is open.</p>
+<p class="ms-4">Because of this UDP scanning can be very time consuming if we want to scan all ports.</p>
+<hr>
+<h2 class="ms-4">Useful Nmap Scan Types and Options</h2>
+<p class="ms-4">There are many scanners out there, however in this section we focus on how to utilize Nmap to the full potential.</p>
+<p class="ms-4">Nmap can be told to scan the most common ports with the argument --top-ports.</p>
+<div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap --top-ports 100 target <target></h6>
+  </div>
+ </div>
+ <p class="ms-4 mt-2">The scanner can try determine versions of the application listening behind a port. This is called service scanning and can be enabled with the -sV flag.</p>
+ <div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap -sV target</h6>
+  </div>
+ </div>
+ <p class="ms-4 mt-2">Nmap has many built-in scripts designed to target a specific service and interact with it. Scripts can do all sorts of things like pull out information from the service or try to exploit it. We can enable the script scanner with the -sC flag. This enables only safe checks, as such no denial of service or exploitation attempts.</p>
+ <div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap -sC target</h6>
+  </div>
+ </div>
+ <p class="ms-4 mt-2">Operating System detection can be done with the scanner, allowing it to try determine which operating system is running. It uses many different parameters to try measure and estimate the likelihood of what operating system it is. This can be enabled with the -O argument.</p>
+ <div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap -O target</h6>
+  </div>
+ </div>
+ <p class="ms-4 mt-2">The aggressive mode of Nmap enables many flags at once. The scanner will do version and OS detection, enable the script scanner and scan the top 1000 most common ports. It can be enabled wit the -A option.</p>
+ <div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap -A target</h6>
+  </div>
+ </div>
+ <p class="ms-4 mt-2">Nmap can also scan IPv6 across all of the above flags. It is enabled by adding the -6 flag.</p>
+  <div class="card p-3 ms-3" style="background-color: #E7E9EB;">
+  <div class="box" style="background-color: #ffffff; border-left: 4px solid #04AA6D;"> 
+    <h6 style="font-family: monospace" class="ms-3 mt-2">nmap -6 target</h6>
+  </div>
+ </div>
+ <div class=" d-flex justify-content-between m-5" style="background-color:#ffffcc">
+        <div class="row" style="align-items: center">
+          <div class="col-12">
+            <p class=" pt-2 ms-3" style="font-size: 15px">Note: The best way to understand is to practice and get hands on experience. Go ahead and download Nmap and try these different scans against systems in your own environment!</p>
+          </div>
+        </div>
+    </div>
+    <hr>
+    <h2 class="ms-4">Nmap Timing options</h2>
+    <p class="ms-4">Scanning can be done with different speeds. Slower speeds have a less likelihood to be detected by IDS systems, while a fast scan might overwhelm the system. Nmap supports the following options:</p>
+    <p>
+      <ul>
+        <li style="margin-left: 40px;">T0 - Paranoid. This option is for attackers whom do not want to be detected. IDS systems can correlate multiple requests within a certain timespan. The paranoid option will try to circumvent this by only sending very few packets per second.</li>
+        <li style="margin-left: 40px;">T1 - Sneaky. Faster but designed to evade IDS systems.</li>
+        <li style="margin-left: 40px;">T2 - Polite. Slow scan doing its best job not to crash a system.</li>
+        <li style="margin-left: 40px;">T3 - Normal. It's simply the default.</li>
+        <li style="margin-left: 40px;">T4 - Aggressive. Fast scan which gives results fast. Most systems can cope with this.</li>
+        <li style="margin-left: 40px;">T5 - Insane. We are sending at full capacity and performance.</li>
+      </ul>
+    </p>
+    <hr>
+    <h2 class="ms-4">Zenmap</h2>
+    <p class="ms-4">Nmap has a built-in GUI ("Graphical User Interface") a long side with other tools too. The GUI can be useful to visualize networks and browse open ports across different hosts. The GUI looks like this:</p>
+    <img src="img_zenmap.png" class="ms-3" style="height: 1100px;">
+
+    <div class="d-flex justify-content-between">
+          <a href="CS Web Aplication.html" class="text-decoration-none mx-5 mt-4">
+            <p class="text-white text-center"><i class="fa-solid fa-chevron-left"></i> Previous</p>
+          </a>
+          <a href="CS HOME.html" class="text-decoration-none mx-5 mt mt-4">
+            <p class="text-white text-center">Next <i class="fa-solid fa-chevron-right"></i></p>
+          </a>
+        </div>
+</body>
+</html>
